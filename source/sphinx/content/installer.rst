@@ -1,9 +1,7 @@
-.. Sphinx:Documentation sur sphinx
+Installer son environnement
+===========================
 
-
-Installation
-============
-
+Sphinx est un module Python. Par conséquent, il faut avoir le langage Python installé sur sa machine. 
 Comme tout module Python, on utilise la commande ``pip`` dans une console.
 
 .. code-block:: bash
