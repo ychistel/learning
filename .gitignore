@@ -1,0 +1,10 @@
+# ignorer les fichiers de compilation sphinx python
+make-auto.bat
+make.bat
+Makefile
+
+# ignorer les fichiers de conf vscode
+.vscode
+
+# ignorer le build local
+build

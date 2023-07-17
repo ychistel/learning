@@ -1,0 +1,70 @@
+body{font-family: 'Quicksand', sans-serif;}
+
+h1{
+	color:#2980b9;
+}
+
+.rst-content section ol li{
+	font-weight:600;
+	margin-bottom:8px;
+}
+
+.rst-content section ol li p{
+	font-weight:normal;
+	padding-left:8px;
+}
+
+/*
+div.admonition-attention.admonition{
+	background:lavenderblush;
+	border:solid 1px red;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+}
+div.admonition-attention.admonition > p.admonition-title{
+	background:red;
+}
+
+div.admonition-exercice.admonition{
+	background:white;
+	border:solid 1px #6ab0de;
+}
+div.admonition-exercice.exercice > p.admonition-title{
+	background:#6ab0de;
+}
+*/
+#my-toctree ul li{
+	list-style:none;
+
+}
+
+img{
+	margin:8px;border:solid 1px #white;
+	background:#d7eef4;padding:8px;
+}
+.rst-content .align-center{
+	margin: 8px auto;
+}
+
+.rst-content h1{
+	margin-top:32px;
+	margin-bottom:16px;
+}
+
+p{
+margin-bottom:8px;	
+}
+
+.caption-text {font-size: 0.8em;}
+.rst-content .admonition{background:none;border:solid 1px #6ab0de;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+.rst-content .admonition .admonition-title{background:#2980b9}
+.rst-content .note{background:none;border:solid 1px #6ab0de;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+.rst-content .attention, .rst-content .error, .rst-content .warning{background:none;border:solid 1px #ffaaaa;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+.rst-content .attention .admonition-title, .rst-content .error .admonition-title, .rst-content .warning .admonition-title{background:red}
+.rst-content .caution{background:none;border:solid 1px #ff9955;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+.rst-content .caution .admonition-title{background:#ff6600}
+.rst-content .important{background:none;border:solid 1px #ffaaaa;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+.rst-content .important .admonition-title{background:red}
+
+.rst-content .tip, .rst-content .hint{background:none;border:solid 1px #c6e9af;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+.rst-content .tip .admonition-title, .rst-content .hint .admonition-title{background:#37c837}
