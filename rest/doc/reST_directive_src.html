@@ -1,83 +1,388 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>reStructuredText Directives &mdash; Documentation Sphinx </title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<html lang="fr" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>reStructuredText Directives &#8212; Documentation Sphinx </title>
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/translations.js"></script>
-        <script src="../../_static/design-tabs.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Recherche" href="../../search.html" /> 
-</head>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-<body class="wy-body-for-nav">
- <div id="main"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Sphinx
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation reST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a></li>
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rest/doc/reST_directive_src';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Documentation Sphinx </p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/installer.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/configurer.html">Le fichier de configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/structure.html">Structure d’un document</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Documentation reST</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/structure.html">Syntaxe <strong>reST</strong></a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pyodide/content/script.html">Un premier script</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx_design/content/installer.html">Présentation de sphinx design</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../wsl/content/installation.html">Installation de wsl</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docker/content/installation.html">installation</a></li>
+</ul>
+</li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Sphinx</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">reStructuredText Directives</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/rest/doc/reST_directive_src.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/rest/doc/reST_directive_src.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>reStructuredText Directives</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#admonitions">Admonitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-admonitions">Specific Admonitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-admonition">Generic Admonition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image">Image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure">Figure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#body-elements">Body Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topic">Topic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebar">Sidebar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-block">Line Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parsed-literal-block">Parsed Literal Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubric">Rubric</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epigraph">Epigraph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-quote">Pull-Quote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-paragraph">Compound Paragraph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#container">Container</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table">Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-table">CSV Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-table">List Table</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-parts">Document Parts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-section-numbering">Automatic Section Numbering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-header-footer">Document Header &amp; Footer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#target-footnotes">Target Footnotes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#html-specific">HTML-Specific</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imagemap">Imagemap</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-for-substitution-definitions">Directives for Substitution Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacement-text">Replacement Text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unicode-character-codes">Unicode Character Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#date">Date</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#including-an-external-document-fragment">Including an External Document Fragment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-data-pass-through">Raw Data Pass-Through</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class">Class</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-normalization">Identifier Normalization</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-interpreted-text-roles">Custom Interpreted Text Roles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-default-interpreted-text-role">Setting the Default Interpreted Text Role</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-document-title">Metadata Document Title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restructuredtext-test-directive">Restructuredtext-Test-Directive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-options">Common Options</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="restructuredtext-directives">
-<h1><a class="toc-backref" href="#id37" role="doc-backlink">reStructuredText Directives</a><a class="headerlink" href="#restructuredtext-directives" title="Lien permanent vers cette rubrique"></a></h1>
+<h1><a class="toc-backref" href="#id37" role="doc-backlink">reStructuredText Directives</a><a class="headerlink" href="#restructuredtext-directives" title="Lien permanent vers cette rubrique">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Author<span class="colon">:</span></dt>
 <dd class="field-odd"><p>David Goodger</p>
@@ -139,9 +444,9 @@ Docutils Document Tree</a> and the <a class="reference external" href="../docuti
 type definition.  For directive implementation details, see <a class="reference external" href="../../howto/rst-directives.html">Creating
 reStructuredText Directives</a>.</p>
 <section id="admonitions">
-<h2><a class="toc-backref" href="#id38" role="doc-backlink">Admonitions</a><a class="headerlink" href="#admonitions" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id38" role="doc-backlink">Admonitions</a><a class="headerlink" href="#admonitions" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="specific-admonitions">
-<span id="warning"></span><span id="tip"></span><span id="note"></span><span id="important"></span><span id="hint"></span><span id="error"></span><span id="danger"></span><span id="caution"></span><span id="attention"></span><h3>Specific Admonitions<a class="headerlink" href="#specific-admonitions" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="warning"></span><span id="tip"></span><span id="note"></span><span id="important"></span><span id="hint"></span><span id="error"></span><span id="danger"></span><span id="caution"></span><span id="attention"></span><h3>Specific Admonitions<a class="headerlink" href="#specific-admonitions" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Types<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« attention », « caution », « danger », « error », « hint »,
@@ -205,7 +510,7 @@ bullet list consisting of two list items:</p>
 </div>
 </section>
 <section id="generic-admonition">
-<h3>Generic Admonition<a class="headerlink" href="#generic-admonition" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Generic Admonition<a class="headerlink" href="#generic-admonition" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« admonition »</p>
@@ -248,7 +553,7 @@ value.</p>
 </section>
 </section>
 <section id="images">
-<h2><a class="toc-backref" href="#id39" role="doc-backlink">Images</a><a class="headerlink" href="#images" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id39" role="doc-backlink">Images</a><a class="headerlink" href="#images" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>There are two image directives: « image » and « figure ».</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -277,7 +582,7 @@ via on-the-fly image conversion.</p>
 </aside>
 </div>
 <section id="image">
-<h3>Image<a class="headerlink" href="#image" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Image<a class="headerlink" href="#image" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« image »</p>
@@ -358,7 +663,7 @@ option argument may be a URI (relative or absolute), or a
 <p>and the common options <a class="reference internal" href="#id28">class</a> and <a class="reference internal" href="#name">name</a>.</p>
 </section>
 <section id="figure">
-<h3>Figure<a class="headerlink" href="#figure" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Figure<a class="headerlink" href="#figure" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« figure »</p>
@@ -449,9 +754,9 @@ unavailable, this option is ignored.</p>
 </section>
 </section>
 <section id="body-elements">
-<h2><a class="toc-backref" href="#id40" role="doc-backlink">Body Elements</a><a class="headerlink" href="#body-elements" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id40" role="doc-backlink">Body Elements</a><a class="headerlink" href="#body-elements" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="topic">
-<h3>Topic<a class="headerlink" href="#topic" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Topic<a class="headerlink" href="#topic" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« topic »</p>
@@ -486,7 +791,7 @@ interpreted as body elements.  For example:</p>
 </div>
 </section>
 <section id="sidebar">
-<h3>Sidebar<a class="headerlink" href="#sidebar" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Sidebar<a class="headerlink" href="#sidebar" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« sidebar »</p>
@@ -532,7 +837,7 @@ interpreted as body elements.  For example:</p>
 <p>and the common options <a class="reference internal" href="#id28">class</a> and <a class="reference internal" href="#name">name</a>.</p>
 </section>
 <section id="line-block">
-<h3>Line Block<a class="headerlink" href="#line-block" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Line Block<a class="headerlink" href="#line-block" title="Lien permanent vers cette rubrique">#</a></h3>
 <div class="admonition-deprecated admonition">
 <p class="admonition-title">Deprecated</p>
 <p>The « line-block » directive is deprecated.  Use the <a class="reference external" href="restructuredtext.html#line-blocks">line block
@@ -578,7 +883,7 @@ example, here’s a classic:</p>
 </div>
 </section>
 <section id="parsed-literal-block">
-<span id="parsed-literal"></span><h3>Parsed Literal Block<a class="headerlink" href="#parsed-literal-block" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="parsed-literal"></span><h3>Parsed Literal Block<a class="headerlink" href="#parsed-literal-block" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« parsed-literal »</p>
@@ -619,7 +924,7 @@ whitespace may be necessary.</p>
 </div>
 </section>
 <section id="code">
-<h3>Code<a class="headerlink" href="#code" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Code<a class="headerlink" href="#code" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« code »</p>
@@ -673,7 +978,7 @@ The optional argument is the number of the first line (default 1).</p>
 </dl>
 </section>
 <section id="math">
-<h3>Math<a class="headerlink" href="#math" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Math<a class="headerlink" href="#math" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« math »</p>
@@ -713,7 +1018,7 @@ support math typesetting, the content is inserted verbatim.</p>
 <p>For inline formulas, use the <a class="reference external" href="roles.html#math">« math » role</a>.</p>
 </section>
 <section id="rubric">
-<h3>Rubric<a class="headerlink" href="#rubric" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Rubric<a class="headerlink" href="#rubric" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« rubric »</p>
@@ -742,7 +1047,7 @@ tree.  A rubric is like an informal heading that doesn’t correspond to
 the document’s structure.</p>
 </section>
 <section id="epigraph">
-<h3>Epigraph<a class="headerlink" href="#epigraph" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Epigraph<a class="headerlink" href="#epigraph" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« epigraph »</p>
@@ -782,7 +1087,7 @@ For example, this input:</p>
 </div>
 </section>
 <section id="highlights">
-<h3>Highlights<a class="headerlink" href="#highlights" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Highlights<a class="headerlink" href="#highlights" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« highlights »</p>
@@ -806,7 +1111,7 @@ consisting of a list.</p>
 See <a class="reference internal" href="#epigraph">Epigraph</a> above for an analogous example.</p>
 </section>
 <section id="pull-quote">
-<h3>Pull-Quote<a class="headerlink" href="#pull-quote" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Pull-Quote<a class="headerlink" href="#pull-quote" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« pull-quote »</p>
@@ -831,7 +1136,7 @@ attention, especially in long articles.</p>
 See <a class="reference internal" href="#epigraph">Epigraph</a> above for an analogous example.</p>
 </section>
 <section id="compound-paragraph">
-<h3>Compound Paragraph<a class="headerlink" href="#compound-paragraph" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Compound Paragraph<a class="headerlink" href="#compound-paragraph" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« compound »</p>
@@ -887,7 +1192,7 @@ physical paragraph of a compound paragraph should have that indent
 </ul>
 </section>
 <section id="container">
-<h3>Container<a class="headerlink" href="#container" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Container<a class="headerlink" href="#container" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« container »</p>
@@ -926,14 +1231,14 @@ application-specific purposes.</p>
 </section>
 </section>
 <section id="tables">
-<h2><a class="toc-backref" href="#id41" role="doc-backlink">Tables</a><a class="headerlink" href="#tables" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id41" role="doc-backlink">Tables</a><a class="headerlink" href="#tables" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Formal tables need more structure than the reStructuredText syntax
 supplies.  Tables may be given titles with the <a class="reference external" href="../doctree.html#table">table</a> directive.
 Sometimes reStructuredText tables are inconvenient to write, or table
 data in a standard format is readily available.  The <a class="reference internal" href="#csv-table">csv-table</a>
 directive supports CSV data.</p>
 <section id="table">
-<h3>Table<a class="headerlink" href="#table" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Table<a class="headerlink" href="#table" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« table »</p>
@@ -989,7 +1294,7 @@ Implies <em>« grid »</em>.</p>
 <p>Plus the common options <a class="reference internal" href="#id28">class</a> and <a class="reference internal" href="#name">name</a>.</p>
 </section>
 <section id="csv-table">
-<span id="id7"></span><h3>CSV Table<a class="headerlink" href="#csv-table" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="id7"></span><h3>CSV Table<a class="headerlink" href="#csv-table" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« csv-table »</p>
@@ -1107,7 +1412,7 @@ under PythonÂ 3.</p>
 </aside>
 </section>
 <section id="list-table">
-<h3>List Table<a class="headerlink" href="#list-table" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>List Table<a class="headerlink" href="#list-table" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« list-table »</p>
@@ -1175,9 +1480,9 @@ The default is equal-width columns (100%/#columns).</p>
 </section>
 </section>
 <section id="document-parts">
-<h2><a class="toc-backref" href="#id42" role="doc-backlink">Document Parts</a><a class="headerlink" href="#document-parts" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id42" role="doc-backlink">Document Parts</a><a class="headerlink" href="#document-parts" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="table-of-contents">
-<span id="contents"></span><h3>Table of Contents<a class="headerlink" href="#table-of-contents" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="contents"></span><h3>Table of Contents<a class="headerlink" href="#table-of-contents" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« contents »</p>
@@ -1242,7 +1547,7 @@ entries, the table of contents itself, or generate no back-links.</p>
 </dl>
 </section>
 <section id="automatic-section-numbering">
-<span id="section-numbering"></span><span id="sectnum"></span><h3>Automatic Section Numbering<a class="headerlink" href="#automatic-section-numbering" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="section-numbering"></span><span id="sectnum"></span><h3>Automatic Section Numbering<a class="headerlink" href="#automatic-section-numbering" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« sectnum » or « section-numbering » (synonyms)</p>
@@ -1299,7 +1604,7 @@ default is 1.</p>
 </dl>
 </section>
 <section id="document-header-footer">
-<span id="footer"></span><span id="header"></span><h3>Document Header &amp; Footer<a class="headerlink" href="#document-header-footer" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="footer"></span><span id="header"></span><h3>Document Header &amp; Footer<a class="headerlink" href="#document-header-footer" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Types<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« header » and « footer »</p>
@@ -1345,9 +1650,9 @@ such as a datestamp, a link to <a class="reference external" href="https://docut
 </section>
 </section>
 <section id="references">
-<h2><a class="toc-backref" href="#id43" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id43" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="target-footnotes">
-<span id="target-notes"></span><h3>Target Footnotes<a class="headerlink" href="#target-footnotes" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="target-notes"></span><h3>Target Footnotes<a class="headerlink" href="#target-footnotes" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« target-notes »</p>
@@ -1375,7 +1680,7 @@ reference.  For every explicit target (of the form, <code class="docutils litera
 visible URL as content.</p>
 </section>
 <section id="footnotes">
-<h3>Footnotes<a class="headerlink" href="#footnotes" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Lien permanent vers cette rubrique">#</a></h3>
 <p><strong>NOT IMPLEMENTED YET</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
@@ -1397,7 +1702,7 @@ visible URL as content.</p>
 <p>&#64;&#64;&#64;</p>
 </section>
 <section id="citations">
-<h3>Citations<a class="headerlink" href="#citations" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Citations<a class="headerlink" href="#citations" title="Lien permanent vers cette rubrique">#</a></h3>
 <p><strong>NOT IMPLEMENTED YET</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
@@ -1420,21 +1725,21 @@ visible URL as content.</p>
 </section>
 </section>
 <section id="html-specific">
-<h2><a class="toc-backref" href="#id44" role="doc-backlink">HTML-Specific</a><a class="headerlink" href="#html-specific" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id44" role="doc-backlink">HTML-Specific</a><a class="headerlink" href="#html-specific" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="imagemap">
-<h3>Imagemap<a class="headerlink" href="#imagemap" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Imagemap<a class="headerlink" href="#imagemap" title="Lien permanent vers cette rubrique">#</a></h3>
 <p><strong>NOT IMPLEMENTED YET</strong></p>
 <p>Non-standard element: imagemap.</p>
 </section>
 </section>
 <section id="directives-for-substitution-definitions">
-<h2><a class="toc-backref" href="#id45" role="doc-backlink">Directives for Substitution Definitions</a><a class="headerlink" href="#directives-for-substitution-definitions" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id45" role="doc-backlink">Directives for Substitution Definitions</a><a class="headerlink" href="#directives-for-substitution-definitions" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>The directives in this section may only be used in <a class="reference external" href="restructuredtext.html#substitution-definitions">substitution
 definitions</a>.  They may not be used directly, in standalone context.
 The <a class="reference external" href="../doctree.html#image">image</a> directive may be used both in substitution definitions
 and in the standalone context.</p>
 <section id="replacement-text">
-<span id="replace"></span><h3>Replacement Text<a class="headerlink" href="#replacement-text" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="replace"></span><h3>Replacement Text<a class="headerlink" href="#replacement-text" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« replace »</p>
@@ -1473,7 +1778,7 @@ the « replace » directive:</p>
 </div>
 </section>
 <section id="unicode-character-codes">
-<span id="unicode"></span><h3>Unicode Character Codes<a class="headerlink" href="#unicode-character-codes" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="unicode"></span><h3>Unicode Character Codes<a class="headerlink" href="#unicode-character-codes" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« unicode »</p>
@@ -1537,7 +1842,7 @@ of the substitution reference is removed.</p>
 </dl>
 </section>
 <section id="date">
-<h3>Date<a class="headerlink" href="#date" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Date<a class="headerlink" href="#date" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« date »</p>
@@ -1573,9 +1878,9 @@ be used.  Examples:</p>
 </section>
 </section>
 <section id="miscellaneous">
-<h2><a class="toc-backref" href="#id46" role="doc-backlink">Miscellaneous</a><a class="headerlink" href="#miscellaneous" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id46" role="doc-backlink">Miscellaneous</a><a class="headerlink" href="#miscellaneous" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="including-an-external-document-fragment">
-<span id="include"></span><h3>Including an External Document Fragment<a class="headerlink" href="#including-an-external-document-fragment" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="include"></span><h3>Including an External Document Fragment<a class="headerlink" href="#including-an-external-document-fragment" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« include »</p>
@@ -1676,7 +1981,7 @@ text markers will be searched in the specified lines (further limiting the
 included content).</p>
 </section>
 <section id="raw-data-pass-through">
-<span id="raw-directive"></span><h3>Raw Data Pass-Through<a class="headerlink" href="#raw-data-pass-through" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="raw-directive"></span><h3>Raw Data Pass-Through<a class="headerlink" href="#raw-data-pass-through" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« raw »</p>
@@ -1757,7 +2062,7 @@ Defaults to the document’s encoding (if specified).</p>
 <p>and the common option <a class="reference internal" href="#id28">class</a>.</p>
 </section>
 <section id="class">
-<span id="classes"></span><h3>Class<a class="headerlink" href="#class" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="classes"></span><h3>Class<a class="headerlink" href="#class" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« class »</p>
@@ -1855,7 +2160,7 @@ quote as a whole.</p>
 </aside>
 </aside>
 <section id="identifier-normalization">
-<h4>Identifier Normalization<a class="headerlink" href="#identifier-normalization" title="Lien permanent vers cette rubrique"></a></h4>
+<h4>Identifier Normalization<a class="headerlink" href="#identifier-normalization" title="Lien permanent vers cette rubrique">#</a></h4>
 <p>Docutils <a class="reference external" href="../doctree.html#classnames-type">class names</a> and <a class="reference external" href="../doctree.html#ids-type">identifier keys</a> are normalized to conform
 to the regular expression « <code class="docutils literal notranslate"><span class="pre">[a-z](-?[a-z0-9]+)*</span></code> » by converting</p>
 <ul class="simple">
@@ -1917,7 +2222,7 @@ downcasing and merge of consecutive hyphens.</p>
 </section>
 </section>
 <section id="custom-interpreted-text-roles">
-<span id="role"></span><h3>Custom Interpreted Text Roles<a class="headerlink" href="#custom-interpreted-text-roles" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="role"></span><h3>Custom Interpreted Text Roles<a class="headerlink" href="#custom-interpreted-text-roles" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« role »</p>
@@ -2011,7 +2316,7 @@ content.  See the <a class="reference external" href="roles.html">reStructuredTe
 for details.</p>
 </section>
 <section id="setting-the-default-interpreted-text-role">
-<span id="default-role"></span><h3>Setting the Default Interpreted Text Role<a class="headerlink" href="#setting-the-default-interpreted-text-role" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="default-role"></span><h3>Setting the Default Interpreted Text Role<a class="headerlink" href="#setting-the-default-interpreted-text-role" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« default-role »</p>
@@ -2058,7 +2363,7 @@ initial default interpreted text role of the standard reStructuredText
 parser is « title-reference ».</p>
 </section>
 <section id="metadata">
-<h3>Metadata<a class="headerlink" href="#metadata" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Metadata<a class="headerlink" href="#metadata" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« meta »</p>
@@ -2141,7 +2446,7 @@ engines to extract and collate.</p>
 </aside>
 </section>
 <section id="metadata-document-title">
-<h3>Metadata Document Title<a class="headerlink" href="#metadata-document-title" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Metadata Document Title<a class="headerlink" href="#metadata-document-title" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« title »</p>
@@ -2166,7 +2471,7 @@ setting</a>. For example, in HTML output the metadata document title
 appears in the title bar of the browser window.</p>
 </section>
 <section id="restructuredtext-test-directive">
-<h3>Restructuredtext-Test-Directive<a class="headerlink" href="#restructuredtext-test-directive" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Restructuredtext-Test-Directive<a class="headerlink" href="#restructuredtext-test-directive" title="Lien permanent vers cette rubrique">#</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Directive Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>« restructuredtext-test-directive »</p>
@@ -2192,7 +2497,7 @@ block.</p>
 </section>
 </section>
 <section id="common-options">
-<h2><a class="toc-backref" href="#id47" role="doc-backlink">Common Options</a><a class="headerlink" href="#common-options" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id47" role="doc-backlink">Common Options</a><a class="headerlink" href="#common-options" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Most of the directives that generate doctree elements support the following
 options:</p>
 <span id="class-option"></span><dl id="id28">
@@ -2220,31 +2525,154 @@ target</a></p>
 </section>
 
 
-           </div>
-          </div>
-          <footer>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, YC.</p>
-  </div>
-
-  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
 </div>
-</body>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#admonitions">Admonitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-admonitions">Specific Admonitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-admonition">Generic Admonition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image">Image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure">Figure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#body-elements">Body Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topic">Topic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebar">Sidebar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-block">Line Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parsed-literal-block">Parsed Literal Block</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubric">Rubric</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epigraph">Epigraph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-quote">Pull-Quote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-paragraph">Compound Paragraph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#container">Container</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table">Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-table">CSV Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-table">List Table</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-parts">Document Parts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-section-numbering">Automatic Section Numbering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-header-footer">Document Header &amp; Footer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#target-footnotes">Target Footnotes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#html-specific">HTML-Specific</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imagemap">Imagemap</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-for-substitution-definitions">Directives for Substitution Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacement-text">Replacement Text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unicode-character-codes">Unicode Character Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#date">Date</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#including-an-external-document-fragment">Including an External Document Fragment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-data-pass-through">Raw Data Pass-Through</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class">Class</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-normalization">Identifier Normalization</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-interpreted-text-roles">Custom Interpreted Text Roles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-default-interpreted-text-role">Setting the Default Interpreted Text Role</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-document-title">Metadata Document Title</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restructuredtext-test-directive">Restructuredtext-Test-Directive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-options">Common Options</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par YC
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, YC.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

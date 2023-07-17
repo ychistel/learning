@@ -1,100 +1,335 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Syntaxe reST &mdash; Documentation Sphinx </title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+
+
+<html lang="fr" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Syntaxe reST &#8212; Documentation Sphinx </title>
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/translations.js"></script>
-        <script src="../../_static/design-tabs.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rest/content/structure';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Documentation Pyodide" href="../../pyodide/index.html" />
-    <link rel="prev" title="Documentation reST" href="../index.html" /> 
-</head>
+    <link rel="prev" title="Documentation reST" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav">
- <div id="main"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Sphinx
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation reST</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntaxe <strong>reST</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#composer-un-document-en-rest">Composer un document en <strong>reST</strong></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#les-titres-et-les-sous-titres">Les titres et les sous-titres</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#l-emphase-le-gras-et-l-italique">L’emphase, le gras et l’italique</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#les-listes">Les listes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#les-liens-hypertextes">Les liens hypertextes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#directive-toctree">Directive toctree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#les-blocs-de-textes">Les blocs de textes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#les-blocs-de-code">Les blocs de code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#inserer-une-image">Insérer une image</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a></li>
-</ul>
-
-        </div>
-      </div>
+  
+  
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
     </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Sphinx</a>
-      </nav>
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Documentation reST</a></li>
-      <li class="breadcrumb-item active">Syntaxe <strong>reST</strong></li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/rest/content/structure.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-      </li>
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Documentation Sphinx </p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/installer.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/configurer.html">Le fichier de configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/structure.html">Structure d’un document</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Documentation reST</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Syntaxe <strong>reST</strong></a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pyodide/content/script.html">Un premier script</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx_design/content/installer.html">Présentation de sphinx design</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../wsl/content/installation.html">Installation de wsl</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docker/content/installation.html">installation</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/rest/content/structure.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Syntaxe reST</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Syntaxe <strong>reST</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#composer-un-document-en-rest">Composer un document en <strong>reST</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-titres-et-les-sous-titres">Les titres et les sous-titres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-emphase-le-gras-et-l-italique">L’emphase, le gras et l’italique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes">Les listes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-liens-hypertextes">Les liens hypertextes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directive-toctree">Directive toctree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-blocs-de-textes">Les blocs de textes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-blocs-de-code">Les blocs de code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inserer-une-image">Insérer une image</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="syntaxe-rest">
-<h1>Syntaxe <strong>reST</strong><a class="headerlink" href="#syntaxe-rest" title="Lien permanent vers cette rubrique"></a></h1>
+<h1>Syntaxe <strong>reST</strong><a class="headerlink" href="#syntaxe-rest" title="Lien permanent vers cette rubrique">#</a></h1>
 <p>Le langage <strong>reST</strong> est un langage de balisage (markup language) très proche du markdown.
 Un fichier reST est un fichier texte dont les éléments sont mis en évidence par des
 <strong>balises</strong> ou des <strong>directives</strong>.</p>
@@ -134,11 +369,11 @@ de la directive est contenue dans celle-ci.</p>
 </ul>
 </section>
 <section id="composer-un-document-en-rest">
-<h1>Composer un document en <strong>reST</strong><a class="headerlink" href="#composer-un-document-en-rest" title="Lien permanent vers cette rubrique"></a></h1>
+<h1>Composer un document en <strong>reST</strong><a class="headerlink" href="#composer-un-document-en-rest" title="Lien permanent vers cette rubrique">#</a></h1>
 <p>Plutôt que faire une liste des différentes syntaxes possibles en <strong>reST</strong>, je propose de
 voir comment on rédige certains éléments de texte avec cette syntaxe.</p>
 <section id="les-titres-et-les-sous-titres">
-<h2>Les titres et les sous-titres<a class="headerlink" href="#les-titres-et-les-sous-titres" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Les titres et les sous-titres<a class="headerlink" href="#les-titres-et-les-sous-titres" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Comme en <strong>html</strong>, il existe différents niveaux de titres. La mise en place d’un titre
 est très simple puisqu’il suffit de le souligner par un même symbole. Les plus
 utilisés sont le signe égal <code class="docutils literal notranslate"><span class="pre">=</span></code>, le tiret <code class="docutils literal notranslate"><span class="pre">-</span></code>, l’astérisque <code class="docutils literal notranslate"><span class="pre">*</span></code>, le signe plus
@@ -155,7 +390,7 @@ utilisés sont le signe égal <code class="docutils literal notranslate"><span c
 </div>
 </section>
 <section id="l-emphase-le-gras-et-l-italique">
-<h2>L’emphase, le gras et l’italique<a class="headerlink" href="#l-emphase-le-gras-et-l-italique" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>L’emphase, le gras et l’italique<a class="headerlink" href="#l-emphase-le-gras-et-l-italique" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Pour placer du texte en gras ou en italique, on utilise l’astérisque comme balise. Un
 astérisque simple transforme le texte en <em>italique</em> et un double astérisque transforme
 le texte en <strong>gras</strong>.</p>
@@ -164,7 +399,7 @@ le texte en <strong>gras</strong>.</p>
 </div>
 </section>
 <section id="les-listes">
-<h2>Les listes<a class="headerlink" href="#les-listes" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Les listes<a class="headerlink" href="#les-listes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>les items d’une <strong>liste numérotée</strong> sont simplement précédés par un numéro suffixé par
 un point. Si le suffixe (séparateur) est remplacé par une parenthèse, à l’export c’est
 un point qui est utilisé.</p>
@@ -204,7 +439,7 @@ symboles.</p>
 </div>
 </section>
 <section id="les-liens-hypertextes">
-<h2>Les liens hypertextes<a class="headerlink" href="#les-liens-hypertextes" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Les liens hypertextes<a class="headerlink" href="#les-liens-hypertextes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>On peut insérer un lien soit directement dans le texte (comme en html) soit par
 référence.</p>
 <p>La première méthode pour créer un lien directement dans le texte suit la syntaxe :
@@ -247,7 +482,7 @@ sur une autre page de la documentation:</p>
 </div>
 </section>
 <section id="directive-toctree">
-<h2>Directive toctree<a class="headerlink" href="#directive-toctree" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Directive toctree<a class="headerlink" href="#directive-toctree" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>La <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/directives.html#toctree-directive">directive toctree</a> permet de construire un <strong>menu de navigation</strong> entre les
 pages de la documentation en utilisant les titres et sous-titres de chaque document.
 La profondeur des titres utilisés est déterminé par la parmètre <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code>.</p>
@@ -267,7 +502,7 @@ dans une colonne, à gauche du document <strong>html</strong>.</p>
 </div>
 </section>
 <section id="les-blocs-de-textes">
-<h2>Les blocs de textes<a class="headerlink" href="#les-blocs-de-textes" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Les blocs de textes<a class="headerlink" href="#les-blocs-de-textes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Pour surexposer un texte, il existe des directives prédéfinies qui vont à la
 création de la documentation générer des blocs html avec des propriétés css adaptées
 pour la surexposition. Ces directives prédéfinies sont <strong>tip</strong>, <strong>caution</strong>,
@@ -347,7 +582,7 @@ construction de la documentation une classe css de même nom.</p>
 </div>
 </section>
 <section id="les-blocs-de-code">
-<h2>Les blocs de code<a class="headerlink" href="#les-blocs-de-code" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Les blocs de code<a class="headerlink" href="#les-blocs-de-code" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Comme pour les blocs de textes à surexposer, il est possible de mettre en évidence un
 code avec la <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/directives.html#directive-code-block">directive code-block</a>. Cette directive accepte en nom le langage
 utilisé.</p>
@@ -393,7 +628,7 @@ le fichier mis à jour provoque une mise à jour de la documentation.</p>
 </div>
 </section>
 <section id="inserer-une-image">
-<h2>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>La <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/basics.html?highlight=image#images">directive image</a> permet d’insérer une image dans un document. Elle admet un nom de
 fichier image comme paramètre. De nombreuses options permettent de gérer l’apparence de
 l’image comme la taille et sa disposition.</p>
@@ -408,34 +643,117 @@ l’image comme la taille et sa disposition.</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Documentation reST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="../../pyodide/index.html" class="btn btn-neutral float-right" title="Documentation Pyodide" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, YC.</p>
-  </div>
-
-  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Documentation reST</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="../../pyodide/index.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Documentation Pyodide</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
 </div>
-</body>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Syntaxe <strong>reST</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#composer-un-document-en-rest">Composer un document en <strong>reST</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-titres-et-les-sous-titres">Les titres et les sous-titres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-emphase-le-gras-et-l-italique">L’emphase, le gras et l’italique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes">Les listes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-liens-hypertextes">Les liens hypertextes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directive-toctree">Directive toctree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-blocs-de-textes">Les blocs de textes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-blocs-de-code">Les blocs de code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inserer-une-image">Insérer une image</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par YC
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, YC.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

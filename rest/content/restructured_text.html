@@ -1,85 +1,370 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les bases de reStructuredText &mdash; Documentation Sphinx </title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<html lang="fr" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Les bases de reStructuredText &#8212; Documentation Sphinx </title>
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/translations.js"></script>
-        <script src="../../_static/design-tabs.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Recherche" href="../../search.html" /> 
-</head>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-<body class="wy-body-for-nav">
- <div id="main"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Sphinx
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation reST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a></li>
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rest/content/restructured_text';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Documentation Sphinx </p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/installer.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/configurer.html">Le fichier de configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/structure.html">Structure d’un document</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Documentation reST</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Syntaxe <strong>reST</strong></a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pyodide/content/script.html">Un premier script</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx_design/content/installer.html">Présentation de sphinx design</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../wsl/content/installation.html">Installation de wsl</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docker/content/installation.html">installation</a></li>
+</ul>
+</li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Sphinx</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Les bases de reStructuredText</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/rest/content/restructured_text.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/rest/content/restructured_text.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Les bases de reStructuredText</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styles-de-texte">Styles de texte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#astuce">Astuce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listes">Listes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-d-enumerations">Les listes d’énumérations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-de-definition">Les listes de définition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preformatage-code-informatique">Préformatage (code informatique)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sections">Sections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-chapitre-1">Titre chapitre 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-section-1-1">Titre Section 1.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-sous-section-1-1-1">Titre Sous-section 1.1.1</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-section-1-2">Titre Section 1.2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-chapitre-2">Titre Chapitre 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-du-document-sous-titre">Titre du document/sous-titre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-du-document">Titre du Document</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1">Section 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separation">Séparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commentaires">Commentaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux">Tableaux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-simples">Tableaux simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-csv">Tableaux CSV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-liste">Tableaux en liste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-grille">Tableaux en grille</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-de-bas-de-page">Notes de bas de page</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-hypertextes">Liens hypertextes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-externes">Liens externes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitutions">Substitutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-html">Insertion de HTML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-des-matieres">Table des matières</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encadre-flottant">Encadré flottant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paragraphes-specifiques-admonitions">Paragraphes spécifiques (admonitions)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-mathematiques">Formules mathématiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-html">Directives HTML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-apres">Et après ?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="les-bases-de-restructuredtext">
-<h1><a class="toc-backref" href="#id10" role="doc-backlink">Les bases de reStructuredText</a><a class="headerlink" href="#les-bases-de-restructuredtext" title="Lien permanent vers cette rubrique"></a></h1>
+<h1><a class="toc-backref" href="#id10" role="doc-backlink">Les bases de reStructuredText</a><a class="headerlink" href="#les-bases-de-restructuredtext" title="Lien permanent vers cette rubrique">#</a></h1>
 <aside class="topic">
 <p class="topic-title">titre du topic</p>
 <p><strong>Auteurs</strong> : Richard Jones &amp; David Goodger, traduits par <a class="reference external" href="http://webcom.upmf-grenoble.fr/sciedu/pdessus/">Philippe Dessus</a></p>
@@ -92,7 +377,7 @@
 <p><strong>Note</strong> : Ces ressources constituent l’un des <strong>kits de pérennisation</strong> du projet <a class="reference external" href="http://www.idefi-reflexpro.fr">ANR-Idéfi ReflexPro</a> et a bénéficié de son financement.</p>
 </aside>
 <section id="introduction">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Ce document est une introduction informelle à <a class="reference external" href="https://fr.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> (reST), qui est un langage de balisage de texte. Le texte reST est interprété (p. ex., par <a class="reference external" href="http://www.sphinx-doc.org">Sphinx</a>) pour produire des documents HTML pouvant être lus par un navigateur.</p>
 <p>Ne pas hésiter à afficher le code source de la page, quand cela est disponible, pour comprendre quelle est la syntaxe utilisée.</p>
 <p>L’entité la plus basique est le paragraphe. C’est un bloc de texte séparé par des lignes vides (une suffit). Il faut noter qu’il n’est pas possible d’aller à la ligne à l’intérieur d’un bloc de texte (voir plus loin le non-effet du passage à la ligne). Les paragraphes doivent avoir la même indentation -i.e., être alignés à gauche. Des paragraphes qui sont décalés par rapport aux précédents sont traités comme des citations. Par exemple :</p>
@@ -104,7 +389,7 @@ court</p>
 <p>Là on revient à la ligne.</p>
 </section>
 <section id="styles-de-texte">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Styles de texte</a><a class="headerlink" href="#styles-de-texte" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Styles de texte</a><a class="headerlink" href="#styles-de-texte" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Dans les paragraphes et autres entités textuelles, il est possible de marquer du texte en <em>italiques</em> avec <code class="docutils literal notranslate"><span class="pre">*italiques*</span></code> ou en <strong>gras</strong> avec <code class="docutils literal notranslate"><span class="pre">**gras**</span></code>, ou encore <strong>partielle</strong>ment ainsi : <code class="docutils literal notranslate"><span class="pre">**partielle**\ment</span></code>. Ce sont des balises dans le texte (<em>inline markup</em>) ; pour le faire .</p>
 <p>Pour faire apparaître du texte en police à empattement fixe, utiliser de doubles guillemets : <code class="docutils literal notranslate"><span class="pre">texte</span> <span class="pre">à</span> <span class="pre">empattement</span> <span class="pre">fixe</span></code> (justement utilisés pour signaler les commandes reST dans ce document). Noter qu’aucun bidouillage supplémentaire ne peut être fait à l’intérieur de tels guillemets (p. ex., pas d’italiques).</p>
 <p>Pour utiliser l’un de ces caractères « spéciaux » dans le texte, il suffit de le faire précéder d’un antislash comme ceci : <code class="docutils literal notranslate"><span class="pre">5\*6=30</span></code>, qui sera rendu ainsi : 5*6=30.</p>
@@ -118,15 +403,15 @@ court</p>
 </ul>
 </section>
 <section id="astuce">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Astuce</a><a class="headerlink" href="#astuce" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Astuce</a><a class="headerlink" href="#astuce" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Il faut considérer que le balisage en ligne est une forme de parenthésage et qu’il doit être utilisé en tant que tel : immédiatement avant et après le texte que l’on veut marquer (sans insérer d’espaces, ni au milieu d’un mot).</p>
 </section>
 <section id="listes">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Listes</a><a class="headerlink" href="#listes" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Listes</a><a class="headerlink" href="#listes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Les listes d’items sont de trois sortes : énumération, à puces, définitions. Pour toutes ces listes on peut avoir autant de paragraphes et de sous-listes que l’on veut, du moment que le côté gauche de leur paragraphe est aligné avec la première ligne de texte.</p>
 <p>Les listes doivent toujours démarrer comme un nouveau paragraphe (après une ligne vide).</p>
 <section id="les-listes-d-enumerations">
-<h3>Les listes d’énumérations<a class="headerlink" href="#les-listes-d-enumerations" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Les listes d’énumérations<a class="headerlink" href="#les-listes-d-enumerations" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Concerne les énumérations (nombres, lettres, chiffres romains). Commencer une ligne avec le nombre ou la lettre suivi(e) d’un point, une parenthèse fermante ou entre parenthèses. Les formes suivantes sont reconnues (attention, tous les navigateurs peuvent ne pas rendre ces énumérations de la même manière : mieux vaut les tester) :</p>
 <ol class="arabic simple">
 <li><p>Nombres</p></li>
@@ -182,7 +467,7 @@ court</p>
 <p>A. Einstein est un gars vraiment très intelligent</p>
 </section>
 <section id="les-listes-de-definition">
-<h3>Les listes de définition<a class="headerlink" href="#les-listes-de-definition" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Les listes de définition<a class="headerlink" href="#les-listes-de-definition" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Au contraire des précédentes, les listes de définition consistent en un terme et la définition de ce terme. Peuvent être utilisées pour un glossaire, un dictionnaire. Le format d’une telle liste est :</p>
 <dl class="simple">
 <dt>Machin</dt><dd><p>La définition de machin, indentée. Noter que le terme est automatiquement mis en gras. Le terme doit tenir en une ligne. la définition tient en un ou plusieurs paragraphes, indentés de la même manière par rapport au terme. Ne pas sauter de ligne entre le terme et sa définition.</p>
@@ -191,7 +476,7 @@ court</p>
 </section>
 </section>
 <section id="preformatage-code-informatique">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Préformatage (code informatique)</a><a class="headerlink" href="#preformatage-code-informatique" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Préformatage (code informatique)</a><a class="headerlink" href="#preformatage-code-informatique" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Pour inclure un paragraphe de texte préformaté, terminer le bloc par « :: ». Le bloc préformaté qui suivra sera terminé quand le texte reviendra au même niveau d’indentation que le texte juste avant le bloc préformaté. Et les deux deux-points sont convertis en un simple deux-points s’ils ne sont pas précédés d’une espace. L’exemple, ci-dessous débute par <code class="docutils literal notranslate"><span class="pre">Un</span> <span class="pre">exemple::</span></code>. Si une espace est mis avant les <cite>::</cite> ils n’apparaissent pas.</p>
 <p>Un exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      <span class="n">Espaces</span><span class="p">,</span> <span class="n">retour</span><span class="o">-</span><span class="n">chariot</span><span class="p">,</span> <span class="n">toute</span> <span class="n">sorte</span> <span class="n">de</span> <span class="n">balisage</span> <span class="p">(</span><span class="n">comme</span> <span class="o">*</span><span class="n">celui</span><span class="o">-</span><span class="n">ci</span><span class="o">*</span> <span class="n">ou</span> \<span class="n">celui</span><span class="o">-</span><span class="n">ci</span><span class="p">)</span> <span class="n">sont</span> <span class="n">préservés</span> <span class="n">dans</span> <span class="n">de</span> <span class="n">tels</span> <span class="n">blocs</span><span class="o">.</span>
@@ -206,40 +491,40 @@ court</p>
 </div>
 </section>
 <section id="sections">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Sections</a><a class="headerlink" href="#sections" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Sections</a><a class="headerlink" href="#sections" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Plus d’informations <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html#sections">ici</a></p>
 <p>Pour organiser du texte long en sections, vous pouvez utiliser des titres de section. Ce sont de simples lignes de texte (un ou plusieurs mots) avec une décoration spécifique : avant ou après le titre, avec des tirets, des signes égal, des tildes, ou tout caractère non-alphanumérique : = - <a href="#id1"><span class="problematic" id="id2">`</span></a>”  » _ + # &lt; &gt; qui plaît. Une décoration seulement sous le titre est distincte de la même décoration utilisée sur et sous le titre. La décoration doit avoir la même longueur que le texte. Utiliser les décorations de manière cohérente, car tous les titres de sections avec la même décoration sont censés être au même niveau de titre.</p>
 </section>
 <section id="titre-chapitre-1">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre chapitre 1</a><a class="headerlink" href="#titre-chapitre-1" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre chapitre 1</a><a class="headerlink" href="#titre-chapitre-1" title="Lien permanent vers cette rubrique">#</a></h2>
 <section id="titre-section-1-1">
-<h3>Titre Section 1.1<a class="headerlink" href="#titre-section-1-1" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Titre Section 1.1<a class="headerlink" href="#titre-section-1-1" title="Lien permanent vers cette rubrique">#</a></h3>
 <section id="titre-sous-section-1-1-1">
-<h4>Titre Sous-section 1.1.1<a class="headerlink" href="#titre-sous-section-1-1-1" title="Lien permanent vers cette rubrique"></a></h4>
+<h4>Titre Sous-section 1.1.1<a class="headerlink" href="#titre-sous-section-1-1-1" title="Lien permanent vers cette rubrique">#</a></h4>
 </section>
 </section>
 <section id="titre-section-1-2">
-<h3>Titre Section 1.2<a class="headerlink" href="#titre-section-1-2" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Titre Section 1.2<a class="headerlink" href="#titre-section-1-2" title="Lien permanent vers cette rubrique">#</a></h3>
 </section>
 </section>
 <section id="titre-chapitre-2">
-<span id="lien-interne"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre Chapitre 2</a><a class="headerlink" href="#titre-chapitre-2" title="Lien permanent vers cette rubrique"></a></h2>
+<span id="lien-interne"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre Chapitre 2</a><a class="headerlink" href="#titre-chapitre-2" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Il faut noter que chaque titre peut aussi être utilisé comme cible d’un lien interne au document, en utilisant simplement son nom. Pour créer un lien hypertexte avec un titre du document, écrire simplement `Titre Chapitre 2`_ pour avoir le lien <a class="reference internal" href="#titre-chapitre-2">Titre Chapitre 2</a>.</p>
 <p>Le lien hypertexte pointant sur une ancre se définit ainsi : :ref:<cite>lien_interne</cite>pour produire le lien <a class="reference internal" href="#lien-interne"><span class="std std-ref">Titre Chapitre 2</span></a>.</p>
 </section>
 <section id="titre-du-document-sous-titre">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre du document/sous-titre</a><a class="headerlink" href="#titre-du-document-sous-titre" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre du document/sous-titre</a><a class="headerlink" href="#titre-du-document-sous-titre" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Le titre du document entier est distinct des titres des sections et doit être formaté d’une manière différente. Utiliser une décoration unique au début du document pour son titre. Utiliser une autre décoration unique immédiatement après le titre du document. Par exemple :</p>
 </section>
 <section id="titre-du-document">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre du Document</a><a class="headerlink" href="#titre-du-document" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Titre du Document</a><a class="headerlink" href="#titre-du-document" title="Lien permanent vers cette rubrique">#</a></h2>
 </section>
 <section id="section-1">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Section 1</a><a class="headerlink" href="#section-1" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Section 1</a><a class="headerlink" href="#section-1" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Noter que les titres du document et de section utilisent tous deux des signes « = » mais ce sont des styles non reliés. Le texte des titres décoré au-dessus et au-dessous peuvent être indentés par souci d’esthétique.</p>
 </section>
 <section id="separation">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Séparation</a><a class="headerlink" href="#separation" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Séparation</a><a class="headerlink" href="#separation" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Une séparation (rendue en HTML avec la balise &lt;hr&gt;) se crée avec la répétition d’au moins 4 caractères de ponctuation, séparée de lignes vides</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">paragraphe</span>
 
@@ -254,15 +539,15 @@ court</p>
 <p>paragraphe</p>
 </section>
 <section id="commentaires">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Commentaires</a><a class="headerlink" href="#commentaires" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Commentaires</a><a class="headerlink" href="#commentaires" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Pour insérer un commentaire qui ne sera pas traité par reST ou Sphinx, faire débuter le paragraphe par « .. ».</p>
 </section>
 <section id="tableaux">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Tableaux</a><a class="headerlink" href="#tableaux" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Tableaux</a><a class="headerlink" href="#tableaux" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Plus d’informations <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#tables">ici</a></p>
 <p>Il y a plusieurs manières de construire des tableaux avec reST et aucune n’est aisée, notamment lorsque les tableaux sont complexes.</p>
 <section id="tableaux-simples">
-<h3>Tableaux simples<a class="headerlink" href="#tableaux-simples" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Tableaux simples<a class="headerlink" href="#tableaux-simples" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Commencent et finissent par une simple ligne de signe « = ». Le signe « - » est utilisé optionnellement pour signaler une fusion de deux colonnes contiguës. Un ou plusieurs espaces signalent les limites de colonnes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">====</span>  <span class="o">====</span>  <span class="o">========</span>
 <span class="n">A</span>     <span class="n">B</span>     <span class="n">A</span> <span class="n">et</span> <span class="n">B</span>
@@ -275,7 +560,7 @@ court</p>
 </pre></div>
 </div>
 <p>sera rendu ainsi :</p>
-<table class="docutils align-default">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>A</p></th>
 <th class="head"><p>B</p></th>
@@ -300,7 +585,7 @@ court</p>
 <p>Note : Débuter une ligne par un espace vide rend la ligne entière vide. Il convient donc de signaler par un antislash (voir tableau) la première case vide, si elle l’est.</p>
 </section>
 <section id="tableaux-csv">
-<h3>Tableaux CSV<a class="headerlink" href="#tableaux-csv" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Tableaux CSV<a class="headerlink" href="#tableaux-csv" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Une autre possibilité est de composer un tableau en spécifiant son format et son contenu ligne à ligne:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. csv-table:: Délices glacés!
         :header: &quot;Produit&quot;, &quot;Quantité&quot;, &quot;Description&quot;
@@ -313,8 +598,8 @@ court</p>
 </pre></div>
 </div>
 <p>sera rendu ainsi :</p>
-<table class="docutils align-default" id="id12">
-<caption><span class="caption-text">Délices glacés!</span><a class="headerlink" href="#id12" title="Lien permanent vers ce tableau"></a></caption>
+<table class="table" id="id12">
+<caption><span class="caption-text">Délices glacés!</span><a class="headerlink" href="#id12" title="Lien permanent vers ce tableau">#</a></caption>
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 18%" />
@@ -344,7 +629,7 @@ crunchy, now would it?</p></td>
 </table>
 </section>
 <section id="tableaux-en-liste">
-<h3>Tableaux en liste<a class="headerlink" href="#tableaux-en-liste" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Tableaux en liste<a class="headerlink" href="#tableaux-en-liste" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Il est aussi possible de générer un tableau à partir de la directive list-table, de manière plutôt aisée (attention à utiliser des espaces pour l’indentation, et non des tabulations):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. list-table:: Délices glacés!
    :widths: 15 10 30
@@ -365,8 +650,8 @@ crunchy, now would it?</p></td>
 </pre></div>
 </div>
 <p>qui sera rendu ainsi :</p>
-<table class="docutils align-default" id="id13">
-<caption><span class="caption-text">Délices Glacés!</span><a class="headerlink" href="#id13" title="Lien permanent vers ce tableau"></a></caption>
+<table class="table" id="id13">
+<caption><span class="caption-text">Délices Glacés!</span><a class="headerlink" href="#id13" title="Lien permanent vers ce tableau">#</a></caption>
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 18%" />
@@ -395,7 +680,7 @@ crunchy, now would it?</p></td>
 </table>
 </section>
 <section id="tableaux-en-grille">
-<h3>Tableaux en grille<a class="headerlink" href="#tableaux-en-grille" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Tableaux en grille<a class="headerlink" href="#tableaux-en-grille" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Une manière plus complexe de réaliser tous types de tableaux est de considérer que :</p>
 <ul class="simple">
 <li><p>un signe « - » délimite l’extérieur du tableau et les lignes horizontales du tableau ;</p></li>
@@ -414,7 +699,7 @@ crunchy, now would it?</p></td>
 </pre></div>
 </div>
 <p>Sera rendu ainsi :</p>
-<table class="docutils align-default">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Header row, column 1</p></th>
 <th class="head"><p>Header 2</p></th>
@@ -435,7 +720,7 @@ crunchy, now would it?</p></td>
 </section>
 </section>
 <section id="notes-de-bas-de-page">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Notes de bas de page</a><a class="headerlink" href="#notes-de-bas-de-page" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Notes de bas de page</a><a class="headerlink" href="#notes-de-bas-de-page" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>L’appel d’une note de bas de page peut être :</p>
 <ul class="simple">
 <li><p>un nombre d’un ou plusieurs chiffres ;</p></li>
@@ -454,10 +739,10 @@ crunchy, now would it?</p></td>
 </aside>
 </section>
 <section id="liens-hypertextes">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Liens hypertextes</a><a class="headerlink" href="#liens-hypertextes" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Liens hypertextes</a><a class="headerlink" href="#liens-hypertextes" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Nous avons déjà vu plus haut (<a class="reference internal" href="#titre-chapitre-2">Titre Chapitre 2</a>) le moyen d’insérer des liens hypertextes référant à des sections du même document (ancres).</p>
 <section id="liens-externes">
-<h3>Liens externes<a class="headerlink" href="#liens-externes" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Liens externes<a class="headerlink" href="#liens-externes" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Référer à un lien hypertexte externe peut se faire, soit ainsi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`A ReStructuredText Primer &lt;http://docutils.sourceforge.net/docs/user/rst/quickstart.html&gt;`_
 </pre></div>
@@ -473,7 +758,7 @@ crunchy, now would it?</p></td>
 </section>
 </section>
 <section id="substitutions">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Substitutions</a><a class="headerlink" href="#substitutions" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Substitutions</a><a class="headerlink" href="#substitutions" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Il est possible de spécifier un ou plusieurs mots (bloc), censés revenir souvent dans un document, qui remplaceront à la compilation le terme qui les représente. Cela est utile pour représenter des mots, une image (mais pas des liens hypertextes). Voici comment représenter le bloc et le mot qui les représente:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Voici</span> <span class="n">un</span> <span class="o">|</span><span class="n">mot</span><span class="o">|</span> <span class="n">à</span> <span class="n">remplacer</span><span class="o">.</span>
 </pre></div>
@@ -488,10 +773,10 @@ crunchy, now would it?</p></td>
  et <a href="#id7"><span class="problematic" id="id8">|</span></a>release] qui indiquent resp. les numéros de la version et de la sous-version du projet.</p>
 </section>
 <section id="directives">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Directives</a><a class="headerlink" href="#directives" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Directives</a><a class="headerlink" href="#directives" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Passons maintenant à la description de directives, qui étendent les capacités de reST. Il est à noter qu’on ne peut utiliser de directives avec du texte mis en forme (gras, italiques).</p>
 <section id="insertion-de-html">
-<h3>Insertion de HTML<a class="headerlink" href="#insertion-de-html" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Insertion de HTML<a class="headerlink" href="#insertion-de-html" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>La directive <code class="docutils literal notranslate"><span class="pre">:raw:</span></code> permet d’insérer du code HTML (ou LaTeX) dans un document reST:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
 
@@ -502,7 +787,7 @@ crunchy, now would it?</p></td>
 <hr width=50 size=10><p>Cela peut être très utile, notamment pour insérer des vidéos, du QCM, ou autres éléments HTML.</p>
 </section>
 <section id="table-des-matieres">
-<h3>Table des matières<a class="headerlink" href="#table-des-matieres" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Table des matières<a class="headerlink" href="#table-des-matieres" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Plus d’informations <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents">ici</a></p>
 <p>On peut afficher la table des matières du document qui la contient, p. ex., à son début ou sa fin. La directive est <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">contents::</span></code>. Les options sont les suivantes. « depth » indique la profondeur des sections listées dans la table, « local » commande la production d’une table correspondant à la section dans laquelle la directive est située ; « backlinks » produit les liens « en retour » de chaque (sous-titre) jusqu’à la table:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">contents</span><span class="p">::</span> <span class="n">Table</span> <span class="n">des</span> <span class="n">matières</span>
@@ -553,7 +838,7 @@ crunchy, now would it?</p></td>
 </ul>
 </section>
 <section id="images">
-<h3>Images<a class="headerlink" href="#images" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Images<a class="headerlink" href="#images" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Pour inclure une image dans votre document, utiliser la directive <code class="docutils literal notranslate"><span class="pre">image</span></code>. Par exemple :: <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span> <span class="pre">images/computer.png</span></code> sera rendu ainsi :</p>
 <img alt="rest/content/images/computer.png" src="rest/content/images/computer.png" />
 <p>Il est possible d’ajouter des informations de taille, d’échelle, d’alignement et de texte alternatif</p>
@@ -569,7 +854,7 @@ crunchy, now would it?</p></td>
 <a class="reference internal image-reference" href="rest/content/images/computer.png"><img alt="ordinateur" class="align-center" src="rest/content/images/computer.png" style="width: 100.0px; height: 50.0px;" /></a>
 </section>
 <section id="encadre-flottant">
-<h3>Encadré flottant<a class="headerlink" href="#encadre-flottant" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Encadré flottant<a class="headerlink" href="#encadre-flottant" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Il est possible d’insérer un encadré flottant (p. ex., pour réaliser des encadrés indépendants du texte, un résumé, etc.), flottant à droite du texte courant, avec la syntaxe suivante:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">sidebar</span><span class="p">::</span> <span class="n">Titre</span> <span class="n">du</span> <span class="n">texte</span> <span class="n">flottant</span>
         <span class="p">:</span><span class="n">subtitle</span><span class="p">:</span> <span class="n">Texte</span> <span class="n">optionnel</span>
@@ -585,7 +870,7 @@ crunchy, now would it?</p></td>
 </aside>
 </section>
 <section id="paragraphes-specifiques-admonitions">
-<span id="rest-admonitions"></span><h3>Paragraphes spécifiques (admonitions)<a class="headerlink" href="#paragraphes-specifiques-admonitions" title="Lien permanent vers cette rubrique"></a></h3>
+<span id="rest-admonitions"></span><h3>Paragraphes spécifiques (admonitions)<a class="headerlink" href="#paragraphes-specifiques-admonitions" title="Lien permanent vers cette rubrique">#</a></h3>
 <p>Se référer à <span class="xref std std-ref">sphinx_admonitions</span> pour les admonitions ajoutées par Sphinx.</p>
 <p>Il existe de nombreux moyens de mettre en valeur un paragraphe. Les voici, appliquées au même paragraphe, respectivement <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">attention::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">caution::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">danger::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">error::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">hint::``</span></code>.., <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">important::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">tip</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">warning::</span></code>. Il faut aussi noter que le rendu de chaque admonition peut varier selon le thème choisi, et qu’il convient de les utiliser de manière cohérente et mesurée tout au long des documents. L’admonition varie en fonction de la langue définie dans le fichier conf.py :</p>
 <div class="admonition-admonition-generique admonition">
@@ -627,7 +912,7 @@ crunchy, now would it?</p></td>
 </section>
 </section>
 <section id="formules-mathematiques">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Formules mathématiques</a><a class="headerlink" href="#formules-mathematiques" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Formules mathématiques</a><a class="headerlink" href="#formules-mathematiques" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Il est possible d’insérer, dans le texte ou en tant que bloc spécifique, des formules mathématiques (utiliser la syntaxe LaTeX). Voici le bloc:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. math::
 
@@ -640,11 +925,11 @@ crunchy, now would it?</p></td>
 <p>et les formules dans le texte : <code class="docutils literal notranslate"><span class="pre">:math:`A_\text{c}</span> <span class="pre">=</span> <span class="pre">(\pi/4)</span> <span class="pre">d^2</span></code>, sera rendu ainsi : <span class="math notranslate nohighlight">\(A_\text{c} = (\pi/4) d^2\)</span>.</p>
 </section>
 <section id="directives-html">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Directives HTML</a><a class="headerlink" href="#directives-html" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Directives HTML</a><a class="headerlink" href="#directives-html" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Il existe une série de directives spécifiques HTML permettant d’ajouter des méta-données ou des balises HTML dans un document reST. La directive <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">meta::</span></code> permet d’ajouter des méta-données dans le document (balise meta).</p>
 </section>
 <section id="et-apres">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Et après ?</a><a class="headerlink" href="#et-apres" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Et après ?</a><a class="headerlink" href="#et-apres" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Ce document est une simple introduction à reST. Plus d’informations ici :</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://aful.org/wikis/interop/ReStructuredText">Intro à reST en français (AFUL)</a></p></li>
@@ -655,31 +940,134 @@ crunchy, now would it?</p></td>
 </section>
 
 
-           </div>
-          </div>
-          <footer>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, YC.</p>
-  </div>
-
-  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
 </div>
-</body>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styles-de-texte">Styles de texte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#astuce">Astuce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listes">Listes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-d-enumerations">Les listes d’énumérations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-de-definition">Les listes de définition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preformatage-code-informatique">Préformatage (code informatique)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sections">Sections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-chapitre-1">Titre chapitre 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-section-1-1">Titre Section 1.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-sous-section-1-1-1">Titre Sous-section 1.1.1</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-section-1-2">Titre Section 1.2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-chapitre-2">Titre Chapitre 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-du-document-sous-titre">Titre du document/sous-titre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titre-du-document">Titre du Document</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1">Section 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separation">Séparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commentaires">Commentaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux">Tableaux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-simples">Tableaux simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-csv">Tableaux CSV</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-liste">Tableaux en liste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-grille">Tableaux en grille</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-de-bas-de-page">Notes de bas de page</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-hypertextes">Liens hypertextes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-externes">Liens externes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitutions">Substitutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-html">Insertion de HTML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-des-matieres">Table des matières</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images">Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encadre-flottant">Encadré flottant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paragraphes-specifiques-admonitions">Paragraphes spécifiques (admonitions)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formules-mathematiques">Formules mathématiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-html">Directives HTML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-apres">Et après ?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par YC
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, YC.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
