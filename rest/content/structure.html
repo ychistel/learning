@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syntaxe reST &mdash; Documentation Sphinx </title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Documentation Pyodide" href="../../pyodide/index.html" />
+    <link rel="prev" title="Documentation reST" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+ <div id="main"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Sphinx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation reST</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntaxe <strong>reST</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#composer-un-document-en-rest">Composer un document en <strong>reST</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#les-titres-et-les-sous-titres">Les titres et les sous-titres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#l-emphase-le-gras-et-l-italique">L’emphase, le gras et l’italique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-listes">Les listes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-liens-hypertextes">Les liens hypertextes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directive-toctree">Directive toctree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-blocs-de-textes">Les blocs de textes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-blocs-de-code">Les blocs de code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inserer-une-image">Insérer une image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sphinx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Documentation reST</a></li>
+      <li class="breadcrumb-item active">Syntaxe <strong>reST</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/rest/content/structure.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="syntaxe-rest">
+<h1>Syntaxe <strong>reST</strong><a class="headerlink" href="#syntaxe-rest" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Le langage <strong>reST</strong> est un langage de balisage (markup language) très proche du markdown.
+Un fichier reST est un fichier texte dont les éléments sont mis en évidence par des
+<strong>balises</strong> ou des <strong>directives</strong>.</p>
+<p>Les <strong>balises</strong> principales sont:</p>
+<ul class="simple">
+<li><p>les titres et sous-titres</p></li>
+<li><p>l’emphase: gras et italique</p></li>
+<li><p>les listes numérotées et non numérotées</p></li>
+<li><p>les liens</p></li>
+</ul>
+<p>Une <strong>directive</strong> suit une syntaxe précise et permet d’agir sur le document pour créer
+des mises en forme de texte plus élaborées. La syntaxe est la même quelle que soit la
+directive utilisée.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">directive</span><span class="p">::</span> nom
+
+   <span class="nc">:paramètre_1:</span> valeur_1
+   <span class="nc">:paramètre_2:</span> valeur_2
+   etc
+</pre></div>
+</div>
+<p>Certaines directives n’ont pas de nom. Les paramètres ne sont pas obligatoires, et
+certaines directives n’ont pas de paramètres. Tout ce qui est identé après la déclaration
+de la directive est contenue dans celle-ci.</p>
+<p>Les principales directives sont:</p>
+<ul class="simple">
+<li><p>la navigation : toctree</p></li>
+<li><p>les blocs de textes : admonition, note, tip</p></li>
+<li><p>les blocs de code</p></li>
+<li><p>les images</p></li>
+<li><p>les tableaux</p></li>
+</ul>
+<p>De nombreux sites documentent sur la syntaxe et les possibilités offertes par <strong>reST</strong>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html">reStructuredText Markup Specification</a> documentation de docutils</p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">Quick reStructuredText</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Sphinx Directives</a></p></li>
+</ul>
+</section>
+<section id="composer-un-document-en-rest">
+<h1>Composer un document en <strong>reST</strong><a class="headerlink" href="#composer-un-document-en-rest" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Plutôt que faire une liste des différentes syntaxes possibles en <strong>reST</strong>, je propose de
+voir comment on rédige certains éléments de texte avec cette syntaxe.</p>
+<section id="les-titres-et-les-sous-titres">
+<h2>Les titres et les sous-titres<a class="headerlink" href="#les-titres-et-les-sous-titres" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Comme en <strong>html</strong>, il existe différents niveaux de titres. La mise en place d’un titre
+est très simple puisqu’il suffit de le souligner par un même symbole. Les plus
+utilisés sont le signe égal <code class="docutils literal notranslate"><span class="pre">=</span></code>, le tiret <code class="docutils literal notranslate"><span class="pre">-</span></code>, l’astérisque <code class="docutils literal notranslate"><span class="pre">*</span></code>, le signe plus
+<code class="docutils literal notranslate"><span class="pre">+</span></code> ou encore le dièse <code class="docutils literal notranslate"><span class="pre">#</span></code> (d’autres symboles sont possibles).</p>
+<p>Le niveau de titre est automatiquement détecté lors de l’export avec la commande
+<code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
+<p>Donnons un exemple de code pour les titres:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="gh">Titre principal</span>
+<span class="gh">==============</span>
+
+<span class="gh">Sous-titre</span>
+<span class="gh">----------</span>
+</pre></div>
+</div>
+</section>
+<section id="l-emphase-le-gras-et-l-italique">
+<h2>L’emphase, le gras et l’italique<a class="headerlink" href="#l-emphase-le-gras-et-l-italique" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Pour placer du texte en gras ou en italique, on utilise l’astérisque comme balise. Un
+astérisque simple transforme le texte en <em>italique</em> et un double astérisque transforme
+le texte en <strong>gras</strong>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Texte en <span class="ge">*italique*</span> et texte en <span class="gs">**gras**</span>.
+</pre></div>
+</div>
+</section>
+<section id="les-listes">
+<h2>Les listes<a class="headerlink" href="#les-listes" title="Lien permanent vers cette rubrique"></a></h2>
+<p>les items d’une <strong>liste numérotée</strong> sont simplement précédés par un numéro suffixé par
+un point. Si le suffixe (séparateur) est remplacé par une parenthèse, à l’export c’est
+un point qui est utilisé.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ol class="arabic simple">
+<li><p>premier item</p></li>
+<li><p>Deuxième item</p>
+<ol class="loweralpha simple">
+<li><p>sous-premier item du deuxième item</p></li>
+<li><p>sous deuxième item du second item</p></li>
+</ol>
+</li>
+</ol>
+<p>Cette liste s’obtient avec le code suivant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">premier</span> <span class="n">item</span>
+<span class="mf">2.</span> <span class="n">Deuxième</span> <span class="n">item</span>
+
+   <span class="n">a</span><span class="p">)</span> <span class="n">sous</span><span class="o">-</span><span class="n">premier</span> <span class="n">item</span> <span class="n">du</span> <span class="n">deuxième</span> <span class="n">item</span>
+   <span class="n">b</span><span class="p">)</span> <span class="n">sous</span> <span class="n">deuxième</span> <span class="n">item</span> <span class="n">du</span> <span class="n">second</span> <span class="n">item</span>
+</pre></div>
+</div>
+</div>
+<p>Les items d’une liste non numérotée (liste à puces) sont précédés d’un tiret ou autres
+symboles.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>premier item</p></li>
+<li><p>Deuxième item</p></li>
+</ul>
+<p>Cette liste s’obtient avec le code suivant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="n">premier</span> <span class="n">item</span>
+<span class="o">+</span> <span class="n">Deuxième</span> <span class="n">item</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="les-liens-hypertextes">
+<h2>Les liens hypertextes<a class="headerlink" href="#les-liens-hypertextes" title="Lien permanent vers cette rubrique"></a></h2>
+<p>On peut insérer un lien soit directement dans le texte (comme en html) soit par
+référence.</p>
+<p>La première méthode pour créer un lien directement dans le texte suit la syntaxe :
+<code class="docutils literal notranslate"><span class="pre">`nom</span> <span class="pre">du</span> <span class="pre">lien</span> <span class="pre">&lt;url</span> <span class="pre">du</span> <span class="pre">lien&gt;`_</span></code>.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Voici un lien vers la page des lauréats normands du concours <strong>la nuit du code 2022</strong>
+sur le <a class="reference external" href="https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101">site NSI-SNT</a> de
+l’académie de Normandie.</p>
+<p>Le lien est codé par <code class="docutils literal notranslate"><span class="pre">`site</span> <span class="pre">NSI-SNT</span> <span class="pre">&lt;https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101&gt;`_</span></code></p>
+</div>
+<p>L’autre méthode pour créer un lien hypertexte est le lien par référence. Lorsqu’une
+référence est construite, on peut l’utiliser plusieurs fois dans le document.
+La syntaxe est la suivante:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`nom du lien`:</span> url du lien ou ancre
+</pre></div>
+</div>
+<p>Les simples quote ne sont pas nécessaires si le lien est constitué d’un seul mot.
+Ensuite, dans le document, on rappelle la référence en plaçant le <em>souligné du 8</em> après
+(et non avant).</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Je crée une ancre pour revenir au début de cette page. Je prends donc le titre
+principal comme ancre. Cela s’écrit:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`Structure d&#39;un document`:</span> Structure d&#39;un document
+</pre></div>
+</div>
+<p>Ici je rappelle mon ancre en ajoutant dans mon texte Structure d’un document
+qui donne le lien <cite>Structure d’un document</cite>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>On remarquera que l’url change en étant suffixée par le nom de l’ancre. Les espaces
+sont remplacés par des tirets. S’il n’y a pas d’ambiguïté, le lien peut se faire
+sur une autre page de la documentation:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`Installation de sphinx`:</span> ../sphinx/installer.html
+</pre></div>
+</div>
+<p>Renvoi vers la page <a class="reference external" href="../sphinx/installer.html">Installation de sphinx</a>.</p>
+</div>
+</section>
+<section id="directive-toctree">
+<h2>Directive toctree<a class="headerlink" href="#directive-toctree" title="Lien permanent vers cette rubrique"></a></h2>
+<p>La <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/directives.html#toctree-directive">directive toctree</a> permet de construire un <strong>menu de navigation</strong> entre les
+pages de la documentation en utilisant les titres et sous-titres de chaque document.
+La profondeur des titres utilisés est déterminé par la parmètre <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code>.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Pour la documentation que vous lisez actuellement, on a la directive suivante:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+   <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Sphinx</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Lors de la construction de cette documentation, le menu de navigation a été placé
+dans une colonne, à gauche du document <strong>html</strong>.</p>
+</div>
+</section>
+<section id="les-blocs-de-textes">
+<h2>Les blocs de textes<a class="headerlink" href="#les-blocs-de-textes" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Pour surexposer un texte, il existe des directives prédéfinies qui vont à la
+création de la documentation générer des blocs html avec des propriétés css adaptées
+pour la surexposition. Ces directives prédéfinies sont <strong>tip</strong>, <strong>caution</strong>,
+<strong>warning</strong> <strong>important</strong>, <strong>note</strong>, <strong>error</strong> et <strong>hint</strong>.</p>
+<p>Voici quelques exemples de ces directives.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">important</span><span class="p">::</span>
+
+   La directive surexposant un texte <span class="gs">**important**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>La directive surexposant un texte <strong>important</strong> ci-après.</p>
+</div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">hint</span><span class="p">::</span>
+
+   La directive surexposant une <span class="gs">**indication**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>La directive surexposant une <strong>indication</strong> ci-après.</p>
+</div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">error</span><span class="p">::</span>
+
+   La directive surexposant une <span class="gs">**erreur**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Erreur</p>
+<p>La directive surexposant une <strong>erreur</strong> ci-après.</p>
+</div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+
+   La directive surexposant une <span class="gs">**note**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La directive surexposant une <strong>note</strong> ci-après.</p>
+</div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">warning</span><span class="p">::</span>
+
+   La directive surexposant un <span class="gs">**avertissement**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>La directive surexposant un <strong>avertissement</strong> ci-après.</p>
+</div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">caution</span><span class="p">::</span>
+
+   La directive surexposant une <span class="gs">**mise en garde**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Prudence</p>
+<p>La directive surexposant une <strong>mise en garde</strong> ci-après.</p>
+</div>
+<p>Si cela ne suffit pas, on peut personnaliser ce bloc de texte surexposé. Cette
+documentation est alimentée de blocs de texte servant d’exemples. Pour ce faire, on
+utilise la directive <strong>admonition</strong> qui accepte un nom. En voici justement un exemple.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Exemple
+
+   La directive surexposant un bloc personnalisé pour <span class="gs">**exemple**</span> ci-après.
+</pre></div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>La directive surexposant un bloc personnalisé pour <strong>exemple</strong> ci-après.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>La couleur utilisée pour les blocs peut être changée en apportant des propriétés
+css. La création d’un bloc <strong>admonition</strong> associé à un nom crée lors de la
+construction de la documentation une classe css de même nom.</p>
+</div>
+</section>
+<section id="les-blocs-de-code">
+<h2>Les blocs de code<a class="headerlink" href="#les-blocs-de-code" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Comme pour les blocs de textes à surexposer, il est possible de mettre en évidence un
+code avec la <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/directives.html#directive-code-block">directive code-block</a>. Cette directive accepte en nom le langage
+utilisé.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Un script en python avec les numéros de lignes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos">2</span>   <span class="k">return</span> <span class="n">n</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Puis on appelle la fonction dans l’interpréteur Python:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">carre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">16</span>
+</pre></div>
+</div>
+<p>Le code pour obtenir l” affichage de la fonction <code class="docutils literal notranslate"><span class="pre">carre</span></code> ci-dessus est le suivant:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   <span class="nc">:linenos:</span>
+
+   def carre(n):
+      return n**2
+</pre></div>
+</div>
+<p>L’affichage du code de l’interpréteur Python est encore plus simple puisqu’il suffit
+de saisir les 3 chevrons &gt;&gt;&gt; sans utiliser la directive <strong>code-block</strong>.</p>
+</div>
+<p>Une autre méthode d’insertion de code est possible et présente l’avantage de ne pas
+recopier le code. La <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/directives.html#directive-literalinclude">directive literalinclude</a> permet d’insérer le contenu d’un fichier
+passé en paramètre. Il y a des options qui permettent de sélectionner les lignes du
+fichier à insérer et aussi la mise en évidence de certaines lignes de code grâce à un
+surlignage.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Supposnons que le fichier <code class="docutils literal notranslate"><span class="pre">exemple.py</span></code> contienne le code de la fonction <code class="docutils literal notranslate"><span class="pre">carre</span></code>.
+On peut insérer ce code avec la directive :</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> exemple.py
+   <span class="nc">:language:</span> python:
+   <span class="nc">:linenos:</span>
+</pre></div>
+</div>
+<p>Ce qui donnera le même affichage que l’exemple précédent. Le principal intérêt est que
+le fichier mis à jour provoque une mise à jour de la documentation.</p>
+</div>
+</section>
+<section id="inserer-une-image">
+<h2>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers cette rubrique"></a></h2>
+<p>La <a class="reference external" href="https://www.sphinx-doc.org/fr/master/usage/restructuredtext/basics.html?highlight=image#images">directive image</a> permet d’insérer une image dans un document. Elle admet un nom de
+fichier image comme paramètre. De nombreuses options permettent de gérer l’apparence de
+l’image comme la taille et sa disposition.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Pour insérer le logo de Python dans ce document, nous devons ajouter le code suivant:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/Python-logo-notext.svg
+</pre></div>
+</div>
+<img alt="../../_images/Python-logo-notext.svg" src="../../_images/Python-logo-notext.svg" /></div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Documentation reST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../../pyodide/index.html" class="btn btn-neutral float-right" title="Documentation Pyodide" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, YC.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+</div>
+</body>
+</html>

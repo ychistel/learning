@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un premier script &mdash; Documentation Sphinx </title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Sphinx design" href="../../sphinx_design/index.html" />
+    <link rel="prev" title="Documentation Pyodide" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+ <div id="main"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Sphinx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rest/index.html">Documentation reST</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation Pyodide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Un premier script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integrer-la-librairie">Intégrer la librairie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#allez-plus-loin">Allez plus loin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sphinx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Documentation Pyodide</a></li>
+      <li class="breadcrumb-item active">Un premier script</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pyodide/content/script.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>De nombreux scripts Python sont dans les documentations, les cours et exercices. Malheureusement, tous ces scripts donnés à titre d’exemple ne sont pas exécutables. Il existe toutefois un moyen de les rendre exécutables dans la page
+web. Cela est devenu possible grâce aux navigateurs qui intègrent le <strong>web assembly</strong>. Cette technologie permet à
+partir d’un script compilé d’être directement exécuté par le processeur depuis le navigateur.</p>
+<p>La compilation d’un script est toujours un peu délicat à réaliser même si des outils existent et font cela très bien.
+Pyodide est une librairie Javascript qui se charge de rendre exécutable un script par le navigateur. On donne ici
+quelques éléments pour y parvenir en même temps qu’on découvre cette librairie.</p>
+<section id="un-premier-script">
+<h1>Un premier script<a class="headerlink" href="#un-premier-script" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Parce qu’il faut bien commencer, on se limite à un cas de base. L’idée est la suivante:</p>
+<ul class="simple">
+<li><p>créer une page web html simple</p></li>
+<li><p>appeler la librairie pyodide.js d’en l’entête du fichier</p></li>
+<li><p>créer un script javascript exécutant un script python</p></li>
+</ul>
+<p class="rubric">la page html</p>
+<p>Ici le code html de base de notre page web.</p>
+</section>
+<section id="integrer-la-librairie">
+<h1>Intégrer la librairie<a class="headerlink" href="#integrer-la-librairie" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Il faut insérer dans le <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> de la page html l’appel vers la librairie en utilisant l’url de pyodide dans
+l’attribut <code class="docutils literal notranslate"><span class="pre">src</span></code>.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Suite à cette balise, on peut intégrer le script minimal de base pour exécuter un script Python dans la page web.
+Celui-ci calcule la somme <code class="docutils literal notranslate"><span class="pre">1+2</span></code> et affiche le résultat dans la console du navigateur. Pour voir le résultat, il faut
+ouvrir les outils de développement du navigateur et afficher la console javascript.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<span class="w">   </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">(){</span>
+<span class="w">     </span><span class="kd">let</span><span class="w"> </span><span class="nx">pyodide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">loadPyodide</span><span class="p">();</span>
+<span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pyodide</span><span class="p">.</span><span class="nx">runPython</span><span class="p">(</span><span class="s2">&quot;1 + 2&quot;</span><span class="p">));</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="nx">main</span><span class="p">();</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="allez-plus-loin">
+<h1>Allez plus loin<a class="headerlink" href="#allez-plus-loin" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Un résultat qui s’affiche dans la console javascript du navigateur et un script Python réduit à une addition, c’est
+plutôt maigre. Il faut donc approfondir et améliorer ces 2 aspects. Dans un premier temps, gérons l’affichage dans la
+page web.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Documentation Pyodide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../../sphinx_design/index.html" class="btn btn-neutral float-right" title="Sphinx design" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, YC.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+</div>
+</body>
+</html>

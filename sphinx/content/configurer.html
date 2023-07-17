@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le fichier de configuration &mdash; Documentation Sphinx </title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Structure d’un document" href="structure.html" />
+    <link rel="prev" title="Installation" href="installer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+ <div id="main"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Sphinx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installer.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Le fichier de configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Structure d’un document</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rest/index.html">Documentation reST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Documentation sphinx</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sphinx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Sphinx</a></li>
+      <li class="breadcrumb-item active">Le fichier de configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/sphinx/content/configurer.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="toctree-wrapper compound">
+</div>
+<section id="le-fichier-de-configuration">
+<h1>Le fichier de configuration<a class="headerlink" href="#le-fichier-de-configuration" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Pendant la phase d’installation du projet, le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> a été créé. Les paramètres par
+défaut sont les suivants :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Sphinx&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2022, YC&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;YC&#39;</span>
+
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx_design&#39;</span><span class="p">,</span><span class="s1">&#39;nbsphinx&#39;</span><span class="p">]</span>
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="c1"># The language for content autogenerated by Sphinx. Refer to documentation</span>
+<span class="c1"># for a list of supported languages.</span>
+<span class="c1">#</span>
+<span class="c1"># This is also used if you do content translation via gettext catalogs.</span>
+<span class="c1"># Usually you set &quot;language&quot; from the command line for these cases.</span>
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;fr&#39;</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="c1">#html_theme = &#39;alabaster&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+<span class="c1">#html_theme = &#39;classic&#39;</span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">html_theme_options = {</span>
+<span class="s2">    &#39;analytics_id&#39;: &#39;G-XXXXXXXXXX&#39;,  #  Provided by Google in your dashboard</span>
+<span class="s2">    &#39;analytics_anonymize_ip&#39;: False,</span>
+</pre></div>
+</div>
+<p class="rubric">Project information</p>
+<p>Le projet est identifié par un nom qui apparaît sur la page web de la documentation, en haut du volet latéral. Pour le
+reste, les informations de copyright et le nom de l’auteur apparaissent dans le pied de page.</p>
+<p class="rubric">General configuration</p>
+<ol class="arabic">
+<li><p>Des extensions sont disponibles pour ajouter des contenus dans la documentation. Ces extensions sont associées à des
+modules Python à installer avec la commande <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_design</span></code> est une extension qui permet de modifer l’apparence des contenus grâce à des règles de style en
+<code class="docutils literal notranslate"><span class="pre">css</span></code>. Ces règles sont ajoutées dans les documents sources en utilisant la syntaxe des directives reST. Plus
+d’informations sur le site <a class="reference external" href="https://sphinx-design.readthedocs.io/en/latest/">sphinx_design</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nbsphinx</span></code> est une extension qui permet d’intégrer des notebook jupyter dans votre documentation. Par exemple,
+le lien suivant renvoie vers un notebook : <a class="reference internal" href="../nb/exemple_nb.html"><span class="doc">notebook jupyter</span></a></p></li>
+</ul>
+<p>D’autres extensions sont disponibles et présentées sur les sites <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/index.html">extension sphinx</a> et <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome sphinxdoc</a>.</p>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="installer.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="structure.html" class="btn btn-neutral float-right" title="Structure d’un document" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, YC.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+</div>
+</body>
+</html>
