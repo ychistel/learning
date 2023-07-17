@@ -48,8 +48,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'sphinx/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Installation" href="content/installer.html" />
-    <link rel="prev" title="Documentation sphinx" href="../index.html" />
+    <link rel="next" title="Installer son environnement" href="content/installer.html" />
+    <link rel="prev" title="Documentation" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -126,12 +126,11 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Documentation</span></p>
-<ul class="current nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Sphinx</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="content/installer.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/installer.html">Installer son environnement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/configurer.html">Le fichier de configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/structure.html">Structure d’un document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/structurer.html">Structure d’un document</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../rest/index.html">Documentation reST</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -154,7 +153,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../wsl/content/installation.html">Installation de wsl</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../docker/index.html">Documentation sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../docker/index.html">Les containers docker</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../docker/content/installation.html">installation</a></li>
 </ul>
 </li>
@@ -308,33 +307,18 @@ document.write(`
                   
   <section id="sphinx">
 <h1>Sphinx<a class="headerlink" href="#sphinx" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>Sphinx est un module Python qui permet de construire une documentation à partir de
-fichiers <strong>reStructured Text</strong> (extension <em>rst</em>).       Les formats d’export pour la
-documention sont divers mais les plus courants sont <strong>html</strong> et <strong>latex</strong>. Sphinx offre
-de nombreux avantages :</p>
+<p>Sphinx est un <strong>module</strong> Python qui permet de construire une documentation à partir de fichiers texte suivant la syntaxe <strong>reStructured Text</strong> (extension <em>rst</em>). Les formats d’export pour la documention sont divers mais les plus courants sont <strong>html</strong> et <strong>latex</strong>. Sphinx offre de nombreux avantages :</p>
 <ol class="arabic simple">
-<li><p>Les fichiers <strong>markdown</strong> et <strong>notebook jupyter</strong> peuvent également être utilisés pour
-alimenter la documentation et bien entendu les fichiers Python qui contiennent une aide
-entre triples quote.</p></li>
-<li><p>Les fichiers sources peuvent être placés dans différents sous-dossiers. Les liens
-hypertextes (dans le cas d’un export html) seront automatiquement ajoutés.</p></li>
+<li><p>Les fichiers <strong>markdown</strong> et <strong>notebook jupyter</strong> peuvent également être utilisés pour alimenter la documentation et bien entendu les fichiers <strong>Python</strong> qui contiennent une aide entre triples quote.</p></li>
+<li><p>Les fichiers sources peuvent être placés dans différents sous-dossiers. Les liens hypertextes (dans le cas d’un export html) seront automatiquement ajoutés.</p></li>
 </ol>
 <p>Comme souvent, il y a une contrepartie :</p>
 <ol class="arabic simple">
-<li><p>Comprendre le fonctionnement de Sphinx, la structure des dossiers et fichiers et la
-méthode de construction de la documentation.</p></li>
-<li><p>Apprendre un nouvau langage de balisage très proche du markdown, mais a la portée de
-tous.</p></li>
+<li><p>Comprendre le fonctionnement de Sphinx, la structure des dossiers et des fichiers et la méthode de construction de la documentation.</p></li>
+<li><p>Apprendre un nouveau langage de balisage très proche du markdown, mais à la portée de tous.</p></li>
 </ol>
-<p>Cela peut paraitre beaucoup mais finalement l’investissement est réduit vu la qualité de
-construction de la documentation.</p>
+<p>L’investissement est assez important mais finalement très rentable vu la qualité de construction de la documentation.</p>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sphinx</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="content/installer.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content/configurer.html">Le fichier de configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content/structure.html">Structure d’un document</a></li>
-</ul>
 </div>
 </section>
 
@@ -356,7 +340,7 @@ construction de la documentation.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Documentation sphinx</p>
+        <p class="prev-next-title">Documentation</p>
       </div>
     </a>
     <a class="right-next"
@@ -364,7 +348,7 @@ construction de la documentation.</p>
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">Installer son environnement</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

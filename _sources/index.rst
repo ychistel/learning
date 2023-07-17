@@ -1,9 +1,8 @@
-Documentation sphinx
-====================
+Documentation
+=============
 
 .. toctree::
    :maxdepth: 1
-   :caption: Documentation
    
    sphinx/index.rst
    rest/index.rst
@@ -11,11 +10,3 @@ Documentation sphinx
    sphinx_design/index.rst
    wsl/index.rst
    docker/index.rst
-   
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
- 
