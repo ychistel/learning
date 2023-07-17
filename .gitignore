@@ -8,3 +8,5 @@ Makefile
 
 # ignorer le build local
 build
+
+_templates
