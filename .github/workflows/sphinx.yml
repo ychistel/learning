@@ -1,0 +1,35 @@
+name: Build Documentation
+
+on:
+  push:
+    branches:
+      - master  # Remplacez "main" par le nom de votre branche principale (ex : master)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Remplacez "3.x" par la version de Python que vous utilisez dans votre projet
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Si vous utilisez un fichier "requirements.txt" pour définir les dépendances
+
+    - name: Build Sphinx
+      run: |
+        sphinx-build -b html source build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: github-pages
+        publish_dir: ./build
+
