@@ -1,6 +1,3 @@
-.. toctree::
-   :maxdepth: 1
-
 .. _`sphinx_design`: https://sphinx-design.readthedocs.io/en/latest/
 .. _`notebook jupyter`: ../nb/exemple_nb.ipynb
 .. _`extension sphinx`: https://www.sphinx-doc.org/en/master/usage/extensions/index.html
