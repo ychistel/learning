@@ -15,7 +15,6 @@ L'investissement est assez important mais finalement très rentable vu la qualit
 
 .. toctree::
    :maxdepth: 1
-   :caption: Sphinx
    :hidden:
    
    content/installer.rst

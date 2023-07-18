@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Documentation reST &#8212; Documentation Sphinx </title>
+    <title>Restructured Text (reST) &#8212; Documentation Sphinx </title>
   
   
   
@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'rest/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Syntaxe reST" href="content/structure.html" />
+    <link rel="next" title="Syntaxe reST" href="content/syntaxe.html" />
     <link rel="prev" title="Structure d’un document" href="../sphinx/content/structurer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
@@ -133,9 +133,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/content/structurer.html">Structure d’un document</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Documentation reST</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="content/structure.html">Syntaxe <strong>reST</strong></a></li>
-
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Restructured Text (reST)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/syntaxe.html">Syntaxe reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/balises.html">Les balises reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/directives.html">Les directives reST</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -291,7 +292,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Documentation reST</h1>
+    <h1>Restructured Text (reST)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -305,25 +306,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="documentation-rest">
-<h1>Documentation reST<a class="headerlink" href="#documentation-rest" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>Un fichier texte rédigé avec la syntaxe reST permet la mise en forme des différents éléments de texte lors de la
-compilation du document en html. Cette syntaxe simplifié s’apparente à la syntaxe mardown utilisée dans les notebook jupyter.</p>
+  <section id="restructured-text-rest">
+<h1>Restructured Text (reST)<a class="headerlink" href="#restructured-text-rest" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Un fichier texte rédigé avec la syntaxe reST permet la mise en forme des différents éléments de texte lors de la compilation du document en html. Cette syntaxe simplifié s’apparente à la syntaxe mardown utilisée dans les notebook jupyter.</p>
 <p>Quelle différence entre ces syntaxes et pourquoi choisir reST ?</p>
 <ul class="simple">
-<li><p>Il y a très peu de différence en dehors de la syntaxe elle-même. Elle peut paraître plus lourde au premier abord,
-mais elle offre au final plus de fonctionnalités.</p></li>
-<li><p>Le choix de reST est lié à la construction de la docamentation par le module <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> de Python qui s’appuie par
-défaut sur cette syntaxe. Mais surtout, elle intègre de très nombreux éléments de mise en forme du texte
-contrairement à markdown qui nécessite le reoucrs à l’intégration de code <code class="docutils literal notranslate"><span class="pre">html</span></code> ! On perd en cohérence et un
-document en markdown n’est plus vraiment en markdown.</p></li>
+<li><p>Il y a très peu de différence en dehors de la syntaxe elle-même. Elle peut paraître plus lourde au premier abord, mais elle offre au final plus de fonctionnalités.</p></li>
+<li><p>Le choix de reST est lié à la construction de la docamentation par le module <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> de Python qui s’appuie par défaut sur cette syntaxe. Mais surtout, elle intègre de très nombreux éléments de mise en forme du texte contrairement à markdown qui nécessite le reoucrs à l’intégration de code <code class="docutils literal notranslate"><span class="pre">html</span></code> ! On perd en cohérence et un document en markdown n’est plus vraiment en markdown.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table des contenus</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="content/structure.html">Syntaxe <strong>reST</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="content/structure.html#composer-un-document-en-rest">Composer un document en <strong>reST</strong></a></li>
-</ul>
 </div>
 </section>
 
@@ -349,11 +340,11 @@ document en markdown n’est plus vraiment en markdown.</p></li>
       </div>
     </a>
     <a class="right-next"
-       href="content/structure.html"
+       href="content/syntaxe.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Syntaxe <strong>reST</strong></p>
+        <p class="prev-next-title">Syntaxe reST</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
