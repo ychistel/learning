@@ -1,3 +1,5 @@
+.. _`balises reST`:
+
 Les balises reST
 ================
 
@@ -119,55 +121,91 @@ Il est possible de créer des sous-listes. C'est l'indentation qui crée le nive
 Les liens hypertextes
 ---------------------
 
-On peut insérer un lien soit directement dans le texte (comme en html) soit par 
-référence. 
+On peut insérer un lien soit directement dans le texte (comme en html) soit par référence. 
 
-La première méthode pour créer un lien directement dans le texte suit la syntaxe :
-```nom du lien <url du lien>`_``.
+.. rubric:: Lien hypertexte
+
+La première méthode pour créer un lien directement dans le texte suit la syntaxe : ```nom du lien <url du lien>`_``.
 
 .. admonition:: Exemple
 
-   Voici un lien vers la page des lauréats normands du concours **la nuit du code 2022** 
-   sur le `site NSI-SNT <https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101>`_ de 
-   l'académie de Normandie.
+   Voici un lien vers la page des lauréats normands du concours **la nuit du code 2022** sur le `site NSI-SNT <https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101>`_ de l'académie de Normandie.
    
    Le lien est codé par ```site NSI-SNT <https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101>`_``
-   
-L'autre méthode pour créer un lien hypertexte est le lien par référence. Lorsqu'une 
-référence est construite, on peut l'utiliser plusieurs fois dans le document.
-La syntaxe est la suivante:
+
+.. rubric:: Lien par référence
+
+L'autre méthode pour créer un lien hypertexte est le lien par référence. Lorsqu'une référence est construite, on peut l'utiliser plusieurs fois dans le document. La syntaxe est la suivante:
 
 .. code-block:: rest
    
-   .. _`nom du lien`: url du lien ou ancre
+   .. _`nom du lien`: url du lien
    
-Les simples quote ne sont pas nécessaires si le lien est constitué d'un seul mot. 
-Ensuite, dans le document, on rappelle la référence en plaçant le *souligné du 8* après 
-(et non avant).
+Les simples quote ne sont pas nécessaires si le lien est constitué d'un seul mot. Ensuite, dans le document, on rappelle la référence en plaçant le *souligné du 8* après : `nom du lien`_.
 
 .. admonition:: Exemple
 
-   Je crée une ancre pour revenir au début de cette page. Je prends donc le titre 
-   principal comme ancre. Cela s'écrit:
+   Je crée une référence pour un lien vers mes `pages github`_.
+
+   .. _`pages github`: https://ychistel.github.io/learning
    
    .. code-block:: rest
    
-      .. _`Structure d'un document`: Structure d'un document
+      .. _`pages github`: https://ychistel.github.io/learning
    
+   Ma référence créée, je la place dans mon document en utilisant le nom de la référence c'est à dire ```pages github`_``.
 
-   Ici je rappelle mon ancre en ajoutant dans mon texte Structure d'un document
-   qui donne le lien `Structure d'un document`.
+.. hint::
+
+   Le positionnement des références dans le document n'a pas d'importance. Il est préférable de les regrouper dans le document, soit au début, soit à la fin.
+
+.. rubric:: Ancre
+
+Une "ancre" est un lien hypertexte interne au document, un renvoi vers une partie de la page html. Cette ancre est placée dans le document, là où l'on veut le renvoi. Il suffit de lui donner un nom avec la syntaxe:
+
+.. code::
+
+   .. _`nom ancre`: 
+
+C'est dans l'appel qu'il y a une légère différence. Le lien est précédé de la balise ``:ref:`` suivie du nom de l'ancre sans le caractère souligné ajouté à la fin.
+
+.. admonition:: Exemple
+
+   Je crée une ancre pour revenir au début de cette page, juste au-dessus du titre principal. Cela s'écrit:
+   
+   .. code-block:: rest
+   
+      .. _`balises reST`: 
+      
+      Les balises reST
+      ================
+      ... suite du document
+   
+   Ensuite, je rappelle mon ancre en ajoutant la référence dans mon texte ``:ref:`balises reST``` qui donne le lien :ref:`balises reST`.
+
+
+Il est possible de réaliser un renvoi vers une autre page de la documentation. Une ancre créée sur une page peut être rappelée sur n'importe qu'elle page de votre documentation.
+
+.. admonition:: Exemple
+
+   Une ancre a été créée sur la première page de la partie sur "reStructured Text". Il suffit de faire un appel de cette référence :ref:`reStructured Text` en insérant ``:ref:`reStructured Text```
 
 .. tip::
 
-   On remarquera que l'url change en étant suffixée par le nom de l'ancre. Les espaces 
-   sont remplacés par des tirets. S'il n'y a pas d'ambiguïté, le lien peut se faire 
-   sur une autre page de la documentation:
+   L'ancre vers une autre page de la documentation peut également se faire avec un lien hypertexte en utilisant un chemin relatif:
    
-   .. code-block:: rest
+   .. code::
 
-      .. _`Installation de sphinx`: ../sphinx/installer.html
+      .. _`reStructured Text`: ../index.html
    
-   .. _`Installation de sphinx`: ../sphinx/installer.html
+   .. _`reStructured Text`: ../index.html
    
-   Renvoi vers la page `Installation de sphinx`_.
+   Renvoi vers la page `reStructured Text`_.
+
+.. rubric:: Lien de téléchargement
+
+Pour finir avec les liens hypertextes, il est possible de créer un lien vers un document à télécharger. La balise qui le permet est ``:download:`` suivi du fichier à télécharger précédé du chemin relatif.
+
+.. admonition:: Exemple
+
+   On propose le téléchargement d'un document au format **pdf** nommé 

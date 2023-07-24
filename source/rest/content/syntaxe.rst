@@ -44,4 +44,3 @@ De nombreux sites documentent la syntaxe et les possibilités offertes par **reS
 + `reStructuredText Markup Specification`_ documentation de docutils
 + `Quick reStructuredText`_
 + `Sphinx Directives`_
-

@@ -13,6 +13,10 @@ Comme souvent, il y a une contrepartie :
 
 L'investissement est assez important mais finalement très rentable vu la qualité de construction de la documentation.
 
+.. note::
+
+   Cette documentation a été réalisée avec ``sphinx``.
+
 .. toctree::
    :maxdepth: 1
    :hidden:
@@ -20,6 +24,7 @@ L'investissement est assez important mais finalement très rentable vu la qualit
    content/installer.rst
    content/configurer.rst
    content/structurer.rst
-   
+   content/export_html.rst
+   content/export_latex.rst
 
  

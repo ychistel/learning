@@ -215,5 +215,6 @@ La `directive image`_ permet d'insérer une image dans un document. Juste après
    .. image:: ../img/Python-logo-notext.svg
       :align: center
       :width: 200
+      :class: padding-8
 
 .. _`directive image`: https://www.sphinx-doc.org/fr/master/usage/restructuredtext/basics.html?highlight=image#images

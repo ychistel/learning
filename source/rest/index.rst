@@ -1,7 +1,9 @@
-Restructured Text (reST)
+.. _`reStructured Text`:
+
+reStructured Text (reST)
 ========================
 
-Un fichier texte rédigé avec la syntaxe reST permet la mise en forme des différents éléments de texte lors de la compilation du document en html. Cette syntaxe simplifié s'apparente à la syntaxe mardown utilisée dans les notebook jupyter.
+Un fichier texte rédigé avec la syntaxe reST permet la mise en forme des différents éléments de texte lors de la compilation du document en html. Cette syntaxe simplifiée s'apparente à la syntaxe mardown utilisée dans les notebook jupyter.
 
 Quelle différence entre ces syntaxes et pourquoi choisir reST ?
 
@@ -15,6 +17,3 @@ Quelle différence entre ces syntaxes et pourquoi choisir reST ?
    content/syntaxe.rst
    content/balises.rst
    content/directives.rst
-   
-
- 
