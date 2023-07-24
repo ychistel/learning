@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Le fichier de configuration &#8212; Documentation Sphinx </title>
+    <title>Exporter la documentation en latex &#8212; Documentation Sphinx </title>
   
   
   
@@ -42,11 +42,11 @@
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../../_static/translations.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'sphinx/content/configurer';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sphinx/content/export_latex';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Structure d’un document" href="structurer.html" />
-    <link rel="prev" title="Installer son environnement" href="installer.html" />
+    <link rel="next" title="reStructured Text (reST)" href="../../rest/index.html" />
+    <link rel="prev" title="Exporter la documentation en html" href="export_html.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -126,10 +126,10 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Sphinx</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="installer.html">Installer son environnement</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Le fichier de configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configurer.html">Le fichier de configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structurer.html">Structure d’un document</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export_html.html">Exporter la documentation en html</a></li>
-<li class="toctree-l2"><a class="reference internal" href="export_latex.html">Exporter la documentation en latex</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exporter la documentation en latex</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../rest/index.html">reStructured Text (reST)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -192,7 +192,7 @@
       
       
       
-      <li><a href="../../_sources/sphinx/content/configurer.rst" target="_blank"
+      <li><a href="../../_sources/sphinx/content/export_latex.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -261,7 +261,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -272,11 +274,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Le fichier de configuration</h1>
+    <h1>Exporter la documentation en latex</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-le-fichier-make">Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-la-commande-sphinx-build">Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-formats-d-images">Les formats d’images</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -286,99 +298,61 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="le-fichier-de-configuration">
-<h1>Le fichier de configuration<a class="headerlink" href="#le-fichier-de-configuration" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>Pendant la phase d’installation du projet, le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> a été créé. Les paramètres par
-défaut sont les suivants :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Project information -----------------------------------------------------</span>
-
-<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Documentation Sphinx&#39;</span>
-<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2023, YC&#39;</span>
-<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;YC&#39;</span>
-
-
-<span class="c1"># -- General configuration ---------------------------------------------------</span>
-
-<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
-<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
-<span class="c1"># ones.</span>
-<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
-<span class="p">]</span>
-
-<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
-<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
-
-<span class="c1"># The language for content autogenerated by Sphinx. Refer to documentation</span>
-<span class="c1"># for a list of supported languages.</span>
-<span class="c1">#</span>
-<span class="c1"># This is also used if you do content translation via gettext catalogs.</span>
-<span class="c1"># Usually you set &quot;language&quot; from the command line for these cases.</span>
-<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;fr&#39;</span>
-
-<span class="c1"># List of patterns, relative to source directory, that match files and</span>
-<span class="c1"># directories to ignore when looking for source files.</span>
-<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
-<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
-
-
-<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
-
-<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
-<span class="c1"># a list of builtin themes.</span>
-<span class="c1">#</span>
-<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;alabaster&#39;</span>
-
-<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
-<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
-<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
-<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+  <section id="exporter-la-documentation-en-latex">
+<h1>Exporter la documentation en latex<a class="headerlink" href="#exporter-la-documentation-en-latex" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>L’export en <code class="docutils literal notranslate"><span class="pre">latex</span></code> se fait exactement comme en <code class="docutils literal notranslate"><span class="pre">html</span></code>. La seule différence apparait dans le format de l’export.</p>
+<section id="avec-le-fichier-make">
+<h2>Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code><a class="headerlink" href="#avec-le-fichier-make" title="Lien permanent vers cette rubrique">#</a></h2>
+<ol class="arabic">
+<li><p>Ouvrir une console ou fenêtre de commande <code class="docutils literal notranslate"><span class="pre">cmd</span></code> et se placer dans le dossier de la documentation contenant le dossier <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p></li>
+<li><p>Saisir la commande:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">latex</span>
 </pre></div>
 </div>
-<p class="rubric">Project information</p>
-<p>Le projet est identifié par un nom qui apparaît sur la page web de la documentation, en haut du volet latéral. Pour le
-reste, les informations de copyright et le nom de l’auteur apparaissent dans le pied de page.</p>
-<p>Les informations sont celles saisies pendant l’installation lancée par la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>.</p>
-<p class="rubric">General configuration</p>
-<ol class="arabic">
-<li><p>Des extensions sont disponibles pour ajouter des contenus dans la documentation. Ces extensions sont associées à des modules Python à installer avec la commande <code class="docutils literal notranslate"><span class="pre">pip</span></code>. La variable <code class="docutils literal notranslate"><span class="pre">extensions</span></code> contient dans une liste python les noms des extensions installées et à utiliser pour le projet.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sphinx_design</span></code> est une extension qui permet de modifer l’apparence des contenus grâce à des règles de style en
-<code class="docutils literal notranslate"><span class="pre">css</span></code>. Ces règles sont ajoutées dans les documents sources en utilisant la syntaxe des directives reST. Plus
-d’informations sur le site <a class="reference external" href="https://sphinx-design.readthedocs.io/en/latest/">sphinx_design</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nbsphinx</span></code> est une extension qui permet d’intégrer des notebook jupyter dans votre documentation. Par exemple,
-le lien suivant renvoie vers un notebook : <a class="reference external" href="../nb/exemple_nb.ipynb">notebook jupyter</a></p></li>
-</ul>
-<p>D’autres extensions sont disponibles et présentées sur les sites <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/index.html">extension sphinx</a> et <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome sphinxdoc</a>.</p>
 </li>
-<li><p>Il est possible de modifier l’apparence des pages <code class="docutils literal notranslate"><span class="pre">html</span></code> proposée par le thème. Ces fichiers sont placés dans le dossier <code class="docutils literal notranslate"><span class="pre">_templates</span></code> dont le chemin d’accès est indiqué dans la variable <code class="docutils literal notranslate"><span class="pre">template_path</span></code>.</p></li>
-<li><p>La variable <code class="docutils literal notranslate"><span class="pre">language</span></code> contient la langue utilisée et saisie à l’installation avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>.</p></li>
-<li><p>Lors de l’exportation en <code class="docutils literal notranslate"><span class="pre">html</span></code> ou en <code class="docutils literal notranslate"><span class="pre">latex</span></code>, certains dossiers ou fichiers peuvent être ignorés. Ils sont indiqués dans une liste python enregistrée dans la variable <code class="docutils literal notranslate"><span class="pre">exclude_pattens</span></code>.</p></li>
+<li><p>L’exportation se réalise dans le dossier <code class="docutils literal notranslate"><span class="pre">build</span></code>. Le dossier <code class="docutils literal notranslate"><span class="pre">build</span></code> contient alors 2 dossiers : <code class="docutils literal notranslate"><span class="pre">doctrees</span></code> et <code class="docutils literal notranslate"><span class="pre">latex</span></code>. Le premier contient l’ensemble des ressources à exporter et le second l’exportation au format latex.</p>
+<figure class="align-center">
+<img alt="../../_images/arbo_build.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/arbo_build.png" />
+</figure>
+</li>
+<li><p>Aller dans le dossier <code class="docutils literal notranslate"><span class="pre">latex</span></code> et vérifier la présence du fichier <code class="docutils literal notranslate"><span class="pre">latex</span></code> et aussi <code class="docutils literal notranslate"><span class="pre">pdf</span></code>.</p>
+<figure class="align-center">
+<img alt="../../_images/arbo_latex.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/arbo_latex.png" />
+</figure>
+</li>
 </ol>
-<p class="rubric">Options for HTML output</p>
-<ol class="arabic">
-<li><p>La première variable <code class="docutils literal notranslate"><span class="pre">html_theme</span></code> contient le thème graphique utilisée pour l’affichage des pages html. Il est possible de changer de thème si celui proposé par défaut ne convient pas. C’est donc dans cette variable que la modification se fait. Les thèmes sont des modules python et doivent être installés avec la commande <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
-<div class="admonition-exemple admonition">
-<p class="admonition-title">Exemple</p>
-<p>Le theme <strong>Read the doc</strong> est un thème proposé par la plateforme de contenu du même nom. Pour l’appliquer à notre projet, il faut donc installer le module <code class="docutils literal notranslate"><span class="pre">sphinx-rtd-theme</span></code> :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le dossier <code class="docutils literal notranslate"><span class="pre">latex</span></code> contient de nombreux fichiers parmi lesquels on retrouve des fichiers de style pour latex (extension .sty) et les images présentes dans la documentation.</p>
+</div>
+</section>
+<section id="avec-la-commande-sphinx-build">
+<h2>Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code><a class="headerlink" href="#avec-la-commande-sphinx-build" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Comme l’exportation en html, on peut donc utiliser directement la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> en remplaçant le premier paramètre lié au format d’exportation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">format_export</span> <span class="n">dossier_source</span> <span class="n">dossier_destination</span>
 </pre></div>
 </div>
-<p>Puis modifier la variable <code class="docutils literal notranslate"><span class="pre">html_theme</span></code> dans le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+<p>Dans notre cas, le format d’export est <code class="docutils literal notranslate"><span class="pre">latex</span></code>, le dossier contenant la documentation est <code class="docutils literal notranslate"><span class="pre">source</span></code> et le dossier de destination est <code class="docutils literal notranslate"><span class="pre">build/latex</span></code>. La commande est donc:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">latex</span> <span class="n">source</span> <span class="n">build</span><span class="o">/</span><span class="n">latex</span>
 </pre></div>
 </div>
-<p>Attention, le nom du module contient des tirets du 6 alors que le nom du theème contient des soulignés du 8!</p>
+</section>
+<section id="les-formats-d-images">
+<h2>Les formats d’images<a class="headerlink" href="#les-formats-d-images" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Pour une exportation en <code class="docutils literal notranslate"><span class="pre">html</span></code>, les images peuvent être au format <code class="docutils literal notranslate"><span class="pre">jpg</span></code> ou <code class="docutils literal notranslate"><span class="pre">png</span></code>. Il en est de même pour l’exportation en <code class="docutils literal notranslate"><span class="pre">latex</span></code>. Dans ce cas, il n’y a pas de problème.</p>
+<p>Toutefois, si on souhaite un format plus adapté aujourd’hui pour le web, il est intéressant d’utiliser un format vectoriel comme le <code class="docutils literal notranslate"><span class="pre">svg</span></code>. Son principal avantage est de pouvoir adapter une image toute dimension sans perte de qualité contrairement aux images de format <code class="docutils literal notranslate"><span class="pre">jpg</span></code> et <code class="docutils literal notranslate"><span class="pre">png</span></code>.</p>
+<p>Malheureusement ce format n’est pas géré par la compilation en <code class="docutils literal notranslate"><span class="pre">latex</span></code> et même si le fichier est bien généré, celui-ci ne contient pas les images au format <code class="docutils literal notranslate"><span class="pre">svg</span></code>. Il existe une soluton à ce problème qui nécessite l’installation de <code class="docutils literal notranslate"><span class="pre">Imagemagick</span></code>, une application permettant de convertir des images dans différents formats.</p>
+<p>Après l’installation de <code class="docutils literal notranslate"><span class="pre">Imagemagick</span></code>, il faut ajouter une extension dans le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.imgconverter&#39;</span><span class="p">]</span>
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Pour le projet de documentation que vous lisez, j’ai opté pour le thème <code class="docutils literal notranslate"><span class="pre">sphinx_book_theme</span></code> qui s’installe avec le module python <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme</span></code></p>
+<p>Cette extension vient s’ajouter aux autres extensions comme <code class="docutils literal notranslate"><span class="pre">nbsphinx</span></code> ou <code class="docutils literal notranslate"><span class="pre">sphinx-design</span></code>.</p>
 </div>
-</li>
-<li><p>La variable <code class="docutils literal notranslate"><span class="pre">html_static_path</span></code> contient la liste des dossiers contenant des fichiers supplémentaires à appliquer aux pages web créées. Si on souhaite apporter des règles <strong>css</strong> supplémentaires ou des scripts <strong>javascript</strong> pour modifier le comportement des pages web, c’est dans ce dossier qu’il faut les installer. La variable <code class="docutils literal notranslate"><span class="pre">html_static_path</span></code> contient le nom du dossier dans lequel se trouve ces fichiers. Par défaut, le dossier est <code class="docutils literal notranslate"><span class="pre">_static</span></code> et il est fortement conseillé de ne pas le modifier.</p></li>
-</ol>
-<p class="rubric">Options for LaTeX output</p>
-<p>Les paramètres d’exportation en <code class="docutils literal notranslate"><span class="pre">latex</span></code> peuvent être modifiés. Absents du fichier créé à l’installation, c’est dans le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> qu’ils devront être ajoutés.</p>
-<p>Plus d’information sur le site de la documentation sphinx et les <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#latex-options">options latex</a>.</p>
+<p>Après cette installation et cette nouvelle configuration, l’exportation en <code class="docutils literal notranslate"><span class="pre">latex</span></code> parvient à insérer les images aux formats <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">jpg</span></code> et <code class="docutils literal notranslate"><span class="pre">svg</span></code>. En fait, les images <code class="docutils literal notranslate"><span class="pre">svg</span></code> sont convertuies au format <code class="docutils literal notranslate"><span class="pre">png</span></code> et sont insérées comme telles.</p>
+<p>Plus d’information sur la documentation sphinx et <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html">image converter using Imagemagick</a>.</p>
+</section>
 </section>
 
 
@@ -394,20 +368,20 @@ le lien suivant renvoie vers un notebook : <a class="reference external" href=".
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="installer.html"
+       href="export_html.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Installer son environnement</p>
+        <p class="prev-next-title">Exporter la documentation en html</p>
       </div>
     </a>
     <a class="right-next"
-       href="structurer.html"
+       href="../../rest/index.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Structure d’un document</p>
+        <p class="prev-next-title">reStructured Text (reST)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -420,6 +394,22 @@ le lien suivant renvoie vers un notebook : <a class="reference external" href=".
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-le-fichier-make">Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-la-commande-sphinx-build">Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-formats-d-images">Les formats d’images</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

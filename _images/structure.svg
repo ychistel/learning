@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="430.44669"
+   width="430.44666"
    height="435.06393"
-   viewBox="0 0 113.88902 115.11067"
+   viewBox="0 0 113.88901 115.11067"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -65,17 +65,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="198.94028"
-     inkscape:cy="187.76313"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="483.65256"
+     inkscape:cy="186.79427"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="854"
-     inkscape:window-height="1008"
-     inkscape:window-x="1057"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
      units="px"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -94,7 +94,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -102,7 +102,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-3.8594343,-90.181653)">
+     transform="translate(-3.8594341,-90.18165)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot1542"
@@ -115,212 +115,215 @@
            x="402.85715"
            y="448.57144" /></flowRegion><flowPara
          id="flowPara1548" /></flowRoot>    <g
-       id="g947">
-      <rect
-         style="opacity:1;fill:#dbe2e3;fill-opacity:1;stroke:#dbe2e3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect1438"
-         width="35.285355"
-         height="41.002369"
-         x="43.448986"
-         y="100.53192"
-         ry="0" />
-      <rect
-         ry="0"
-         y="99.237183"
-         x="42.010384"
-         height="41.002369"
-         width="35.285355"
-         id="rect1418"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#5f8dd3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         transform="scale(0.93341746,1.071332)"
-         id="text1422"
-         y="98.345543"
-         x="46.175213"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.14720058px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.29505005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.29505005px"
-           y="98.345543"
-           x="46.175213"
-           id="tspan1420"
-           sodipodi:role="line">Documentation sphinx</tspan><tspan
-           id="tspan1434"
-           style="stroke-width:0.29505005px"
-           y="102.27954"
-           x="46.175213"
-           sodipodi:role="line">=============</tspan><tspan
-           id="tspan1436"
-           style="stroke-width:0.29505005px"
-           y="106.21355"
-           x="46.175213"
-           sodipodi:role="line" /><tspan
-           id="tspan1432"
-           style="stroke-width:0.29505005px"
-           y="110.14754"
-           x="46.175213"
-           sodipodi:role="line">.. toctree::</tspan><tspan
-           id="tspan1424"
-           style="stroke-width:0.29505005px"
-           y="114.08154"
-           x="46.175213"
-           sodipodi:role="line">   sphinx/installer.rst</tspan><tspan
-           id="tspan1426"
-           style="stroke-width:0.29505005px"
-           y="118.01555"
-           x="46.175213"
-           sodipodi:role="line">   rest/structure.rst</tspan></text>
-      <text
-         transform="scale(0.81766008,1.2230021)"
-         id="text1430"
-         y="79.387566"
-         x="60.486614"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.01229382px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.56365252px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.56365252px"
-           y="79.387566"
-           x="60.486614"
-           id="tspan1428"
-           sodipodi:role="line">index.rst</tspan></text>
-      <rect
-         ry="0"
-         y="162.8233"
-         x="6.764678"
-         height="41.002369"
-         width="35.285355"
-         id="rect1453"
-         style="opacity:1;fill:#dbe2e3;fill-opacity:1;stroke:#dbe2e3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#5f8dd3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect1455"
-         width="35.285355"
-         height="41.002369"
-         x="5.3260775"
-         y="161.52858"
-         ry="0" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.74087834px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25695732px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="7.310719"
-         y="160.03964"
-         id="text1469"
-         transform="scale(0.95846269,1.0433374)"><tspan
-           sodipodi:role="line"
-           id="tspan1457"
-           x="7.310719"
-           y="160.03964"
-           style="stroke-width:0.25695732px">Sphinx</tspan><tspan
-           sodipodi:role="line"
-           x="7.310719"
-           y="164.54048"
-           style="stroke-width:0.25695732px"
-           id="tspan1459">====</tspan><tspan
-           sodipodi:role="line"
-           x="7.310719"
-           y="168.50395"
-           style="stroke-width:0.25695732px"
-           id="tspan1461" /><tspan
-           sodipodi:role="line"
-           x="7.310719"
-           y="172.46744"
-           style="stroke-width:0.25695732px"
-           id="tspan1463">Installation et make</tspan><tspan
-           id="tspan1523"
-           sodipodi:role="line"
-           x="7.310719"
-           y="176.96828"
-           style="stroke-width:0.25695732px">----------------------------</tspan><tspan
-           sodipodi:role="line"
-           x="7.310719"
-           y="181.46912"
-           style="stroke-width:0.25695732px"
-           id="tspan1467">Comme tout module ...</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.5779357px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.42918146px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="6.1395893"
-         y="135.45758"
-         id="text1473"
-         transform="scale(0.84772906,1.1796222)"><tspan
-           sodipodi:role="line"
-           id="tspan1471"
-           x="6.1395893"
-           y="135.45758"
-           style="stroke-width:0.42918146px">sphinx/installer.rst</tspan></text>
+       id="g919">
       <g
-         transform="matrix(0.7612121,0,0,0.7612121,1.2374827,25.158965)"
-         id="g1584">
+         id="g947">
         <rect
            ry="0"
-           y="180.84886"
-           x="104.7789"
-           height="53.864578"
-           width="46.354172"
-           id="rect1477"
-           style="opacity:1;fill:#dbe2e3;fill-opacity:1;stroke:#dbe2e3;stroke-width:0.37762576;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+           y="100.53192"
+           x="43.448986"
+           height="41.002369"
+           width="35.285355"
+           id="rect1438"
+           style="opacity:1;fill:#dbe2e3;fill-opacity:1;stroke:#dbe2e3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
         <rect
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#5f8dd3;stroke-width:0.37762576;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           id="rect1479"
-           width="46.354172"
-           height="53.864578"
-           x="102.88902"
-           y="179.14798"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#5f8dd3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect1418"
+           width="35.285355"
+           height="41.002369"
+           x="42.010384"
+           y="99.237183"
            ry="0" />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.60218978px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.33770528px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="111.63966"
-           y="175.40268"
-           id="text1493"
-           transform="scale(0.94121906,1.0624519)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.14720058px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.29505005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="46.175213"
+           y="98.345543"
+           id="text1422"
+           transform="scale(0.93341746,1.071332)"><tspan
              sodipodi:role="line"
-             id="tspan1481"
-             x="111.63966"
-             y="175.40268"
-             style="stroke-width:0.33770528px">Structure d'un document</tspan><tspan
+             id="tspan1420"
+             x="46.175213"
+             y="98.345543"
+             style="stroke-width:0.29505005px">Documentation sphinx</tspan><tspan
              sodipodi:role="line"
-             x="111.63966"
-             y="179.90541"
-             style="stroke-width:0.33770528px"
-             id="tspan1483">===============</tspan><tspan
+             x="46.175213"
+             y="102.27954"
+             style="stroke-width:0.29505005px"
+             id="tspan1434">=============</tspan><tspan
              sodipodi:role="line"
-             x="111.63966"
-             y="184.40816"
-             style="stroke-width:0.33770528px"
-             id="tspan1491" /><tspan
+             x="46.175213"
+             y="106.21355"
+             style="stroke-width:0.29505005px"
+             id="tspan1436" /><tspan
              sodipodi:role="line"
-             x="111.63966"
-             y="188.91089"
-             style="stroke-width:0.33770528px"
-             id="tspan1556">Au démarrage de la ...</tspan></text>
+             x="46.175213"
+             y="110.14754"
+             style="stroke-width:0.29505005px"
+             id="tspan1432">.. toctree::</tspan><tspan
+             sodipodi:role="line"
+             x="46.175213"
+             y="114.08154"
+             style="stroke-width:0.29505005px"
+             id="tspan1424">   sphinx/index.rst</tspan><tspan
+             sodipodi:role="line"
+             x="46.175213"
+             y="118.01555"
+             style="stroke-width:0.29505005px"
+             id="tspan1426">   rest/index.rst</tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.18105316px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.57947373px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="115.58012"
-           y="157.25665"
-           id="text1497"
-           transform="scale(0.89056374,1.1228843)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.01229382px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.56365252px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="60.486614"
+           y="79.387566"
+           id="text1430"
+           transform="scale(0.81766008,1.2230021)"><tspan
              sodipodi:role="line"
-             id="tspan1495"
-             x="115.58012"
+             id="tspan1428"
+             x="60.486614"
+             y="79.387566"
+             style="stroke-width:0.56365252px">index.rst</tspan></text>
+        <rect
+           style="opacity:1;fill:#dbe2e3;fill-opacity:1;stroke:#dbe2e3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect1453"
+           width="35.285355"
+           height="41.002369"
+           x="6.764678"
+           y="162.8233"
+           ry="0" />
+        <rect
+           ry="0"
+           y="161.52858"
+           x="5.3260775"
+           height="41.002369"
+           width="35.285355"
+           id="rect1455"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#5f8dd3;stroke-width:0.28745329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           transform="scale(0.95846269,1.0433374)"
+           id="text1469"
+           y="160.03964"
+           x="7.310719"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.74087834px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25695732px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.25695732px"
+             y="160.03964"
+             x="7.310719"
+             id="tspan1457"
+             sodipodi:role="line">Sphinx</tspan><tspan
+             id="tspan1459"
+             style="stroke-width:0.25695732px"
+             y="163.46574"
+             x="7.310719"
+             sodipodi:role="line">====</tspan><tspan
+             id="tspan1461"
+             style="stroke-width:0.25695732px"
+             y="166.89185"
+             x="7.310719"
+             sodipodi:role="line" /><tspan
+             id="tspan1463"
+             style="stroke-width:0.25695732px"
+             y="170.31793"
+             x="7.310719"
+             sodipodi:role="line">Installer et configurer</tspan><tspan
+             style="stroke-width:0.25695732px"
+             y="173.74403"
+             x="7.310719"
+             sodipodi:role="line"
+             id="tspan1523">------------------------------</tspan><tspan
+             id="tspan1467"
+             style="stroke-width:0.25695732px"
+             y="177.17014"
+             x="7.310719"
+             sodipodi:role="line">Comme tout module ...</tspan></text>
+        <text
+           transform="scale(0.84772906,1.1796222)"
+           id="text1473"
+           y="135.45758"
+           x="6.1395893"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.5779357px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.42918146px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.42918146px"
+             y="135.45758"
+             x="6.1395893"
+             id="tspan1471"
+             sodipodi:role="line">sphinx/index.rst</tspan></text>
+        <g
+           id="g1584"
+           transform="matrix(0.7612121,0,0,0.7612121,1.2374827,25.158965)">
+          <rect
+             style="opacity:1;fill:#dbe2e3;fill-opacity:1;stroke:#dbe2e3;stroke-width:0.37762576;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             id="rect1477"
+             width="46.354172"
+             height="53.864578"
+             x="104.7789"
+             y="180.84886"
+             ry="0" />
+          <rect
+             ry="0"
+             y="179.14798"
+             x="102.88902"
+             height="53.864578"
+             width="46.354172"
+             id="rect1479"
+             style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#5f8dd3;stroke-width:0.37762576;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+          <text
+             transform="scale(0.94121906,1.0624519)"
+             id="text1493"
+             y="175.40268"
+             x="111.63966"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.60218978px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.33770528px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               style="stroke-width:0.33770528px"
+               y="175.40268"
+               x="111.63966"
+               id="tspan1481"
+               sodipodi:role="line">Structure d'un document</tspan><tspan
+               id="tspan1483"
+               style="stroke-width:0.33770528px"
+               y="179.90541"
+               x="111.63966"
+               sodipodi:role="line">===============</tspan><tspan
+               id="tspan1491"
+               style="stroke-width:0.33770528px"
+               y="184.40816"
+               x="111.63966"
+               sodipodi:role="line" /><tspan
+               id="tspan1556"
+               style="stroke-width:0.33770528px"
+               y="188.91089"
+               x="111.63966"
+               sodipodi:role="line">Au démarrage de la ...</tspan></text>
+          <text
+             transform="scale(0.89056374,1.1228843)"
+             id="text1497"
              y="157.25665"
-             style="stroke-width:0.57947373px">rest/structure.rst</tspan></text>
+             x="115.58012"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.18105316px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.57947373px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               style="stroke-width:0.57947373px"
+               y="157.25665"
+               x="115.58012"
+               id="tspan1495"
+               sodipodi:role="line">rest/index.rst</tspan></text>
+        </g>
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+           d="M 59.720241,150.91219 44.223216,170.94493"
+           id="path1586"
+           inkscape:connector-curvature="0"
+           inkscape:path-effect="#path-effect1588"
+           inkscape:original-d="M 59.720241,150.91219 44.223216,170.94493"
+           transform="matrix(0.7612121,0,0,0.7612121,1.2374827,21.850184)" />
+        <path
+           inkscape:original-d="M 59.720241,150.91219 44.223216,170.94493"
+           inkscape:path-effect="#path-effect1874"
+           inkscape:connector-curvature="0"
+           id="path1872"
+           d="M 59.720241,150.91219 44.223216,170.94493"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1878)"
+           transform="matrix(-0.7612121,0,0,0.7612121,118.61128,21.418604)" />
       </g>
-      <path
-         transform="matrix(0.7612121,0,0,0.7612121,1.2374827,21.850184)"
-         inkscape:original-d="M 59.720241,150.91219 44.223216,170.94493"
-         inkscape:path-effect="#path-effect1588"
-         inkscape:connector-curvature="0"
-         id="path1586"
-         d="M 59.720241,150.91219 44.223216,170.94493"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
-      <path
-         transform="matrix(-0.7612121,0,0,0.7612121,118.61128,21.418604)"
-         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1878)"
-         d="M 59.720241,150.91219 44.223216,170.94493"
-         id="path1872"
-         inkscape:connector-curvature="0"
-         inkscape:path-effect="#path-effect1874"
-         inkscape:original-d="M 59.720241,150.91219 44.223216,170.94493" />
     </g>
   </g>
 </svg>

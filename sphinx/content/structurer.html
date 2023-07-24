@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -43,12 +42,10 @@
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sphinx/content/structurer';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Restructured Text (reST)" href="../../rest/index.html" />
+    <link rel="next" title="Exporter la documentation en html" href="export_html.html" />
     <link rel="prev" title="Le fichier de configuration" href="configurer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
@@ -131,31 +128,14 @@
 <li class="toctree-l2"><a class="reference internal" href="installer.html">Installer son environnement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configurer.html">Le fichier de configuration</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Structure d’un document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export_html.html">Exporter la documentation en html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export_latex.html">Exporter la documentation en latex</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../rest/index.html">Restructured Text (reST)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rest/index.html">reStructured Text (reST)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../rest/content/syntaxe.html">Syntaxe reST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../rest/content/balises.html">Les balises reST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../rest/content/directives.html">Les directives reST</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../pyodide/content/script.html">Un premier script</a></li>
-
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../sphinx_design/content/installer.html">Présentation de sphinx design</a></li>
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../wsl/content/installation.html">Installation de wsl</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../docker/index.html">Les containers docker</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../docker/content/installation.html">installation</a></li>
 </ul>
 </li>
 </ul>
@@ -306,30 +286,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="toctree-wrapper compound">
-</div>
-<section id="structure-d-un-document">
+  <section id="structure-d-un-document">
 <h1>Structure d’un document<a class="headerlink" href="#structure-d-un-document" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>La création de la documentation, avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, le fichier
-<code class="docutils literal notranslate"><span class="pre">index.rst</span></code> a été créé et ajouté dans le dossier <strong>source</strong>. Ce fichier est la page
-d’accueil de notre export html, il contient donc les liens vers les autres pages de notre
-documentation.</p>
-<p>Par exemple, pour cette documentation, le fichier d’index contient les liens vers 2
-fichiers qui sont <code class="docutils literal notranslate"><span class="pre">installer.rst</span></code> placé dans le dossier <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> et cette page
-<code class="docutils literal notranslate"><span class="pre">structure.rst</span></code> placé dans le dossier <code class="docutils literal notranslate"><span class="pre">rest</span></code>.</p>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Structure un document</div>
-<img alt="../../_images/structure.svg" class="align-center" src="../../_images/structure.svg" /></div>
+<p>La création de la structure de la documentation avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> crée le fichier <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> dans le dossier <strong>source</strong>. Ce fichier est la page d’accueil de notre export html, il contient donc les liens vers les autres pages de notre documentation.</p>
+<p>Par exemple, pour cette documentation, le fichier <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> contient les liens vers les 2 fichiers <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> placés dans les dossiers <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> et <code class="docutils literal notranslate"><span class="pre">rest</span></code>.</p>
+<figure class="align-center">
+<a class="margin-8 padding-16 border-style-solid border-width-1 border-radius-8 border-color-blue-light reference internal image-reference" href="../../_images/arbo_2.svg"><img alt="../../_images/arbo_2.svg" class="margin-8 padding-16 border-style-solid border-width-1 border-radius-8 border-color-blue-light" height="367" src="../../_images/arbo_2.svg" width="113" /></a>
+</figure>
+<p>L’insertion des liens vers les autres fichiers se fait avec une directive <code class="docutils literal notranslate"><span class="pre">toctree</span></code> placée dans le fichier <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> du dossier <code class="docutils literal notranslate"><span class="pre">source</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">1</span>
+
+   <span class="n">sphinx</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+   <span class="n">rest</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
 </div>
+<p>On a donc un fichier qui contient 2 liens vers 2 autres fichiers situés dans 2 dossiers du répertoire <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/structure.svg" src="../../_images/structure.svg" /><figcaption>
+<p><span class="caption-text">Structure un document</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Les 2 fichiers <code class="docutils literal notranslate"><span class="pre">installer.rst</span></code> et <code class="docutils literal notranslate"><span class="pre">structure.rst</span></code> peuvent eux-même pointer vers
-d’autres fichiers.</p>
+<p>Chaque fichier <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> peut pointer vers d’autres fichiers situés dans les dossiers <code class="docutils literal notranslate"><span class="pre">rest</span></code> et <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>.</p>
 </div>
-<p>Quel que soit le fichier, celui-ci est rédigé avec la syntaxe <strong>reST</strong> pour restructued
-Text.</p>
 </section>
 
 
@@ -354,11 +335,11 @@ Text.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../rest/index.html"
+       href="export_html.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Restructured Text (reST)</p>
+        <p class="prev-next-title">Exporter la documentation en html</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

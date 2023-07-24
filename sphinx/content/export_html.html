@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Installer son environnement &#8212; Documentation Sphinx </title>
+    <title>Exporter la documentation en html &#8212; Documentation Sphinx </title>
   
   
   
@@ -42,11 +42,11 @@
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../../_static/translations.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'sphinx/content/installer';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sphinx/content/export_html';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Le fichier de configuration" href="configurer.html" />
-    <link rel="prev" title="Sphinx" href="../index.html" />
+    <link rel="next" title="Exporter la documentation en latex" href="export_latex.html" />
+    <link rel="prev" title="Structure d’un document" href="structurer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -125,10 +125,10 @@
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Sphinx</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Installer son environnement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installer.html">Installer son environnement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configurer.html">Le fichier de configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structurer.html">Structure d’un document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="export_html.html">Exporter la documentation en html</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exporter la documentation en html</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export_latex.html">Exporter la documentation en latex</a></li>
 </ul>
 </li>
@@ -192,7 +192,7 @@
       
       
       
-      <li><a href="../../_sources/sphinx/content/installer.rst" target="_blank"
+      <li><a href="../../_sources/sphinx/content/export_html.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +274,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installer son environnement</h1>
+    <h1>Exporter la documentation en html</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -284,9 +284,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environnement-python">Environnement Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-documentation">Première documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-du-contenu">Structure du contenu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-le-fichier-make">Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-la-commande-sphinx-build">Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-construction-avec-sphinx-autobuild">Auto-construction avec <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -298,99 +298,68 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="installer-son-environnement">
-<h1>Installer son environnement<a class="headerlink" href="#installer-son-environnement" title="Lien permanent vers cette rubrique">#</a></h1>
-<section id="environnement-python">
-<h2>Environnement Python<a class="headerlink" href="#environnement-python" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Quel que soit votre machine et votre système d’exploitation, l’autodocumentation avec sphinx ne nécessite que le langage Python. Assurez-vous d’avoir ce langage installé. Dans le cas contraire, rendez vous sur la page de téléchargement de Python et installez-le.</p>
-<figure class="align-center" id="id1">
-<a class="background-blue border-radius-4 margin-top-8 margin-bottom-4 reference internal image-reference" href="https://www.python.org/static/img/python-logo.png"><img alt="https://www.python.org/static/img/python-logo.png" class="background-blue border-radius-4 margin-top-8 margin-bottom-4" src="https://www.python.org/static/img/python-logo.png" /></a>
-<figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://www.python.org/downloads/">Téléchargement de Python</a></span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">#</a></p>
-</figcaption>
+  <section id="exporter-la-documentation-en-html">
+<h1>Exporter la documentation en html<a class="headerlink" href="#exporter-la-documentation-en-html" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Lorsque les premiers contenus sont rédigés, il faut exporter la documentation au format <code class="docutils literal notranslate"><span class="pre">html</span></code>. Plusieurs méthodes sont possibles pour réaliser cette compilation.</p>
+<section id="avec-le-fichier-make">
+<h2>Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code><a class="headerlink" href="#avec-le-fichier-make" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Lors de la création de la structure avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, le fichier <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> a été ajouté. Ce fichier est un exécutable <code class="docutils literal notranslate"><span class="pre">windows</span></code> qui lance l’exportation de la documentation dans un autre format.</p>
+<p>La procédure est la suivante:</p>
+<ol class="arabic">
+<li><p>Ouvrir une console ou fenêtre de commande <code class="docutils literal notranslate"><span class="pre">cmd</span></code> et se placer dans le dossier de la documentation contenant le dossier <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p></li>
+<li><p>Saisir la commande:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p>L’exportation se réalise dans le dossier <code class="docutils literal notranslate"><span class="pre">build</span></code>. Le dossier <code class="docutils literal notranslate"><span class="pre">build</span></code> contient alors 2 dossiers : <code class="docutils literal notranslate"><span class="pre">doctrees</span></code> et <code class="docutils literal notranslate"><span class="pre">html</span></code>. Le premier contient l’ensemble des ressources à exporter et le second l’exportation au format html.</p>
+<figure class="align-center">
+<img alt="../../_images/arbo_html.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/arbo_html.png" />
 </figure>
-<p>Sphinx est un module Python. Comme tout module Python, on utilise la commande <code class="docutils literal notranslate"><span class="pre">pip</span></code> dans une console pour l’installer.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
-</pre></div>
-</div>
-<p>D’autres modules dépendant du module <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> permettent d’ajouter des fonctionnalité à la construction de la documentation. On peut citer <code class="docutils literal notranslate"><span class="pre">nbsphinx</span></code>, <code class="docutils literal notranslate"><span class="pre">sphinx-design</span></code> et <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme</span></code>.</p>
-<ul class="simple">
-<li><p>Le module <code class="docutils literal notranslate"><span class="pre">nbsphinx</span></code> permet d’ajouter des notebook dans notre documentation.</p></li>
-<li><p>Le module <code class="docutils literal notranslate"><span class="pre">sphinx-design</span></code> permet d’ajouter quelques effets visuels</p></li>
-<li><p>Le module <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme</span></code> est un theme pour nos pages web.</p></li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Pour ajouter des notebook, il sera nécessaire d’installer les modules <code class="docutils literal notranslate"><span class="pre">pandoc</span></code> et <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>.</p>
-</div>
-<p>Tous ces modules peuvent être installés en les plaçant dans un fichier <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> et en saisissant dans une console la commande <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Module pour construire l&#39;auto-documentation</span>
-<span class="n">sphinx</span>
-
-<span class="c1"># Thèmes pour le rendu html</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">book</span><span class="o">-</span><span class="n">theme</span>
-
-<span class="c1"># Module pour améliorer l&#39;interface html</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">design</span>
-
-<span class="c1"># Module pour auto-construire la doc</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span>
-
-<span class="c1"># Module pour créer des notebook jupyter</span>
-<span class="n">jupyter</span>
-
-<span class="c1"># Module pour insérer des notebook jupyter</span>
-<span class="n">nbsphinx</span>
-
-<span class="c1"># Module pour convertir des fichiers d&#39;un format à un autre</span>
-<span class="n">pandoc</span>
-</pre></div>
-</div>
-</section>
-<section id="premiere-documentation">
-<h2>Première documentation<a class="headerlink" href="#premiere-documentation" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Après l’installation des modules, on va créer notre première documentation avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> dans une console. Mais avant, on crée un
-répertoire <strong>documentation</strong> qui contiendra toute la structure et les contenus présentés ci-après.</p>
-<div class="admonition tip">
-<p class="admonition-title">Astuce</p>
-<p>Ouvrir votre explorateur windows, naviguer jusqu’au dossier de documentation, puis dans la barre d’adresse, taper
-<code class="docutils literal notranslate"><span class="pre">cmd</span></code> devant l’adresse et valider.</p>
-<img alt="../../_images/ouvrir_cmd.svg" class="margin-bottom-8 align-center" src="../../_images/ouvrir_cmd.svg" /></div>
-<p>La console s’ouvre dans le dossier <strong>documentation</strong>. On saisit la commande <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> et on valide :</p>
-<a class="margin-bottom-8 reference internal image-reference" href="../../_images/sphinx-quickstart_1.jpg"><img alt="../../_images/sphinx-quickstart_1.jpg" class="margin-bottom-8 align-left" src="../../_images/sphinx-quickstart_1.jpg" style="width: 100%;" /></a>
-<p>Différentes questions s’affichent pendant la procédure.</p>
-<ol class="arabic simple">
-<li><p>La séparation entre le répertoire <strong>source</strong> contenant la documentation et le dossier <strong>build</strong> contenant l’export
-en html ou latex. Il est recommandé de ne pas les séparer mais nous allons quand même les séparer. Donc on répond
-<code class="docutils literal notranslate"><span class="pre">y</span></code> à la question.</p></li>
-<li><p>Ensuite, on demande le nom du projet, le nom de l’auteur et la release du projet.</p></li>
-<li><p>La langue du projet à choisir. Ici c’est <code class="docutils literal notranslate"><span class="pre">fr</span></code>.</p></li>
+</li>
+<li><p>Aller dans le dossier <code class="docutils literal notranslate"><span class="pre">html</span></code> et ouvrir le fichier <code class="docutils literal notranslate"><span class="pre">index.html</span></code> avec un navigateur.</p>
+<figure class="align-center">
+<img alt="../../_images/index_html.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/index_html.png" />
+</figure>
+</li>
 </ol>
-<p>Voilà c’est fini. Ci-dessous une illustration de toute la procédure.</p>
-<a class="margin-bottom-8 reference internal image-reference" href="../../_images/sphinx-quickstart_2.jpg"><img alt="../../_images/sphinx-quickstart_2.jpg" class="margin-bottom-8 align-left" src="../../_images/sphinx-quickstart_2.jpg" style="width: 100%;" /></a>
-<p>Après exécution de la commande, la structure de notre projet est en place. Le dossier <strong>documentation</strong> contient deux
-dossiers <strong>source</strong> et <strong>build</strong> et 2 fichiers <strong>make.bat</strong> et <strong>Makefile</strong>.</p>
-<a class="margin-8 padding-16 border-style-solid border-width-1 border-color-blue-light border-radius-8 reference internal image-reference" href="../../_images/arbo_quickstart.svg"><img alt="Arborescence documentaire" class="margin-8 padding-16 border-style-solid border-width-1 border-color-blue-light border-radius-8 align-center" height="269" src="../../_images/arbo_quickstart.svg" width="112" /></a>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Le dossier <strong>build</strong> est vide. Aucune documentation n’est construite mais la structure est en place.</p>
-</div>
-<p>Le dossier <strong>source</strong> contient deux dossiers <strong>_static</strong> et <strong>_templates</strong> et deux fichiers. Ces 2 dossiers resteront
-vides jusqu’au moment où nous modifierons l’apparence du projet. Les deux fichiers sont <strong>conf.py</strong> et <strong>index.rst</strong>.</p>
-<p class="rubric">conf.py</p>
-<p>C’est le fichier de configuration de notre projet. Il contient des informations sur la structure de notre projet, son
-nom, le nom de l’auteur et des informations sur les extensions que l’on peut utiliser.</p>
-<p class="rubric">index.rst</p>
-<p>C’est notre premier fichier <strong>reStructured Text</strong> créé par défaut. C’est le point de départ, la page d’accueil, de
-notre documentation.</p>
 </section>
-<section id="structure-du-contenu">
-<h2>Structure du contenu<a class="headerlink" href="#structure-du-contenu" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Le dossier <strong>source</strong> va contenir tous les contenus de notre documentation. Celle-ci peut contenir des fichiers ou différents dossiers contenant de nombreux fichiers. Pour notre projet, on ajoute deux dossiers vides qui contiendront la documentation sur <strong>sphinx</strong> et et la documentation sur la syntaxe <strong>rest</strong>.</p>
-<p>Donc au final, le dossier source a pour contenu 4 dossiers et 2 fichiers comme le montre la figure suivante.</p>
-<a class="margin-8 padding-16 border-style-solid border-width-1 border-color-blue-light border-radius-8 reference internal image-reference" href="../../_images/arbo_1.svg"><img alt="Arborescence documentaire" class="margin-8 padding-16 border-style-solid border-width-1 border-color-blue-light border-radius-8 align-center" height="370" src="../../_images/arbo_1.svg" width="130" /></a>
-<p>L’installation et la mise en forme de la structure sont réalisées. Il ne reste plus qu’à construire la documentation.</p>
+<section id="avec-la-commande-sphinx-build">
+<h2>Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code><a class="headerlink" href="#avec-la-commande-sphinx-build" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Le programme batch <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> n’est finalement qu’un programme qui utilise la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> avec des paramètres prédéfinis comme le nom du dossier où se trouve les sources de la documentation et le dossier de destination <code class="docutils literal notranslate"><span class="pre">build</span></code>.</p>
+<p>On peut donc utiliser directement la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> à condition d’ajouter les paramètres nécessaires. La commande assez simple requiert 3 paramètres:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">format_export</span> <span class="n">dossier_source</span> <span class="n">dossier_destination</span>
+</pre></div>
+</div>
+<p>Dans notre cas, le format d’export est <code class="docutils literal notranslate"><span class="pre">html</span></code>, le dossier contenant la documentation est <code class="docutils literal notranslate"><span class="pre">source</span></code> et le dossier de destination est <code class="docutils literal notranslate"><span class="pre">build</span></code>. La commande est donc:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="n">source</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>Tous les fichiers de l’export sont directement inclus dans le dossier build, ce qui n’est pas conseillé.</p>
+<figure class="align-center">
+<img alt="../../_images/arbo_html_2.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/arbo_html_2.png" />
+</figure>
+<p>Pour rassemebler la documentation dans un même dossier, il suffit d’ajouter un nom de dossier après le dossier <code class="docutils literal notranslate"><span class="pre">build</span></code>. Celui-ci sera créé s’il n’existe pas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="n">source</span> <span class="n">build</span><span class="o">/</span><span class="n">doc</span>
+</pre></div>
+</div>
+</section>
+<section id="auto-construction-avec-sphinx-autobuild">
+<h2>Auto-construction avec <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span></code><a class="headerlink" href="#auto-construction-avec-sphinx-autobuild" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Les 2 méthodes précédentes ne permettent pas de visualiser directement dans le navigateur les modifications apportées à la documentation. Il faut relancer la commande d’export et actualiser le navigateur pour voir les modifications.</p>
+<p>Une dernière méthode le permet. Elle s’appuie sur le module Python <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span></code>. Il suffit juste de remplacer la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> par <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="n">source</span> <span class="n">build</span><span class="o">/</span><span class="n">doc</span>
+</pre></div>
+</div>
+<p>Après la validation de la commande, on remarque qu’un serveur web a été lancé et que la documentation est accessible à l’adresse <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8000</span></code> ou <code class="docutils literal notranslate"><span class="pre">http://localhost:8000</span></code>.</p>
+<figure class="align-center">
+<img alt="../../_images/serveur_web.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/serveur_web.png" />
+</figure>
+<p>Dans le navigateur, on ouvre un nouvel onglet en  saisissant l’url du serveur local lancé par la commande.</p>
+<figure class="align-center">
+<img alt="../../_images/index_html_2.png" class="padding-8 border-style-solid border-width-1 border-radius-8 border-color-blue-light" src="../../_images/index_html_2.png" />
+</figure>
+<p>Le serveur web met à jour les pages web exportées dès qu’elles sont modifiées. C’est plus confortable et cela permet de corriger aussitôt si les modifications apportées ne sont pas satisfaisantes.</p>
 </section>
 </section>
 
@@ -407,20 +376,20 @@ notre documentation.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="structurer.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Sphinx</p>
+        <p class="prev-next-title">Structure d’un document</p>
       </div>
     </a>
     <a class="right-next"
-       href="configurer.html"
+       href="export_latex.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Le fichier de configuration</p>
+        <p class="prev-next-title">Exporter la documentation en latex</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -442,9 +411,9 @@ notre documentation.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environnement-python">Environnement Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-documentation">Première documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-du-contenu">Structure du contenu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-le-fichier-make">Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-la-commande-sphinx-build">Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-construction-avec-sphinx-autobuild">Auto-construction avec <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span></code></a></li>
 </ul>
   </nav></div>
 

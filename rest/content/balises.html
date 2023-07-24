@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -43,8 +42,6 @@
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../../_static/translations.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rest/content/balises';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
@@ -131,31 +128,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/installer.html">Installer son environnement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/configurer.html">Le fichier de configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/structurer.html">Structure d’un document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/export_html.html">Exporter la documentation en html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sphinx/content/export_latex.html">Exporter la documentation en latex</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Restructured Text (reST)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">reStructured Text (reST)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="syntaxe.html">Syntaxe reST</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Les balises reST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directives.html">Les directives reST</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../pyodide/content/script.html">Un premier script</a></li>
-
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../sphinx_design/index.html">Sphinx design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../sphinx_design/content/installer.html">Présentation de sphinx design</a></li>
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../wsl/index.html">WSL : Windows Subsystem Linux</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../wsl/content/installation.html">Installation de wsl</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../docker/index.html">Les containers docker</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../docker/content/installation.html">installation</a></li>
 </ul>
 </li>
 </ul>
@@ -319,7 +299,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="les-balises-rest">
-<h1>Les balises reST<a class="headerlink" href="#les-balises-rest" title="Lien permanent vers cette rubrique">#</a></h1>
+<span id="balises-rest"></span><h1>Les balises reST<a class="headerlink" href="#les-balises-rest" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="titres-et-emphase">
 <h2>Titres et emphase<a class="headerlink" href="#titres-et-emphase" title="Lien permanent vers cette rubrique">#</a></h2>
 <p>Plutôt que faire une liste des différentes syntaxes possibles en <strong>reST</strong>, je propose à travers différents exemples l’utilisation de certains éléments de texte avec cette syntaxe.</p>
@@ -422,45 +402,68 @@ document.write(`
 </section>
 <section id="les-liens-hypertextes">
 <h2>Les liens hypertextes<a class="headerlink" href="#les-liens-hypertextes" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>On peut insérer un lien soit directement dans le texte (comme en html) soit par
-référence.</p>
-<p>La première méthode pour créer un lien directement dans le texte suit la syntaxe :
-<code class="docutils literal notranslate"><span class="pre">`nom</span> <span class="pre">du</span> <span class="pre">lien</span> <span class="pre">&lt;url</span> <span class="pre">du</span> <span class="pre">lien&gt;`_</span></code>.</p>
+<p>On peut insérer un lien soit directement dans le texte (comme en html) soit par référence.</p>
+<p class="rubric">Lien hypertexte</p>
+<p>La première méthode pour créer un lien directement dans le texte suit la syntaxe : <code class="docutils literal notranslate"><span class="pre">`nom</span> <span class="pre">du</span> <span class="pre">lien</span> <span class="pre">&lt;url</span> <span class="pre">du</span> <span class="pre">lien&gt;`_</span></code>.</p>
 <div class="admonition-exemple admonition">
 <p class="admonition-title">Exemple</p>
-<p>Voici un lien vers la page des lauréats normands du concours <strong>la nuit du code 2022</strong>
-sur le <a class="reference external" href="https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101">site NSI-SNT</a> de
-l’académie de Normandie.</p>
+<p>Voici un lien vers la page des lauréats normands du concours <strong>la nuit du code 2022</strong> sur le <a class="reference external" href="https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101">site NSI-SNT</a> de l’académie de Normandie.</p>
 <p>Le lien est codé par <code class="docutils literal notranslate"><span class="pre">`site</span> <span class="pre">NSI-SNT</span> <span class="pre">&lt;https://nsi-snt.ac-normandie.fr/nuit-du-code-2022-101&gt;`_</span></code></p>
 </div>
-<p>L’autre méthode pour créer un lien hypertexte est le lien par référence. Lorsqu’une
-référence est construite, on peut l’utiliser plusieurs fois dans le document.
-La syntaxe est la suivante:</p>
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`nom du lien`:</span> url du lien ou ancre
+<p class="rubric">Lien par référence</p>
+<p>L’autre méthode pour créer un lien hypertexte est le lien par référence. Lorsqu’une référence est construite, on peut l’utiliser plusieurs fois dans le document. La syntaxe est la suivante:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`nom du lien`:</span> url du lien
 </pre></div>
 </div>
-<p>Les simples quote ne sont pas nécessaires si le lien est constitué d’un seul mot.
-Ensuite, dans le document, on rappelle la référence en plaçant le <em>souligné du 8</em> après
-(et non avant).</p>
+<p>Les simples quote ne sont pas nécessaires si le lien est constitué d’un seul mot. Ensuite, dans le document, on rappelle la référence en plaçant le <em>souligné du 8</em> après : <a href="#id1"><span class="problematic" id="id2">`nom du lien`_</span></a>.</p>
 <div class="admonition-exemple admonition">
 <p class="admonition-title">Exemple</p>
-<p>Je crée une ancre pour revenir au début de cette page. Je prends donc le titre
-principal comme ancre. Cela s’écrit:</p>
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`Structure d&#39;un document`:</span> Structure d&#39;un document
+<p>Je crée une référence pour un lien vers mes <a class="reference external" href="https://ychistel.github.io/learning">pages github</a>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`pages github`:</span> https://ychistel.github.io/learning
 </pre></div>
 </div>
-<p>Ici je rappelle mon ancre en ajoutant dans mon texte Structure d’un document
-qui donne le lien <cite>Structure d’un document</cite>.</p>
+<p>Ma référence créée, je la place dans mon document en utilisant le nom de la référence c’est à dire <code class="docutils literal notranslate"><span class="pre">`pages</span> <span class="pre">github`_</span></code>.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>Le positionnement des références dans le document n’a pas d’importance. Il est préférable de les regrouper dans le document, soit au début, soit à la fin.</p>
+</div>
+<p class="rubric">Ancre</p>
+<p>Une « ancre » est un lien hypertexte interne au document, un renvoi vers une partie de la page html. Cette ancre est placée dans le document, là où l’on veut le renvoi. Il suffit de lui donner un nom avec la syntaxe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _`nom ancre`:
+</pre></div>
+</div>
+<p>C’est dans l’appel qu’il y a une légère différence. Le lien est précédé de la balise <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> suivie du nom de l’ancre sans le caractère souligné ajouté à la fin.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Je crée une ancre pour revenir au début de cette page, juste au-dessus du titre principal. Cela s’écrit:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`balises reST`:</span>
+
+<span class="gh">Les balises reST</span>
+<span class="gh">================</span>
+<span class="cp">... suite du document</span>
+</pre></div>
+</div>
+<p>Ensuite, je rappelle mon ancre en ajoutant la référence dans mon texte <code class="docutils literal notranslate"><span class="pre">:ref:`balises</span> <span class="pre">reST`</span></code> qui donne le lien <a class="reference internal" href="#balises-rest"><span class="std std-ref">Les balises reST</span></a>.</p>
+</div>
+<p>Il est possible de réaliser un renvoi vers une autre page de la documentation. Une ancre créée sur une page peut être rappelée sur n’importe qu’elle page de votre documentation.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Une ancre a été créée sur la première page de la partie sur « reStructured Text ». Il suffit de faire un appel de cette référence <a class="reference internal" href="../index.html#restructured-text"><span class="std std-ref">reStructured Text (reST)</span></a> en insérant <code class="docutils literal notranslate"><span class="pre">:ref:`reStructured</span> <span class="pre">Text`</span></code></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Astuce</p>
-<p>On remarquera que l’url change en étant suffixée par le nom de l’ancre. Les espaces
-sont remplacés par des tirets. S’il n’y a pas d’ambiguïté, le lien peut se faire
-sur une autre page de la documentation:</p>
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_`Installation de sphinx`:</span> ../sphinx/installer.html
+<p>L’ancre vers une autre page de la documentation peut également se faire avec un lien hypertexte en utilisant un chemin relatif:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _`reStructured Text`: ../index.html
 </pre></div>
 </div>
-<p>Renvoi vers la page <a class="reference external" href="../sphinx/installer.html">Installation de sphinx</a>.</p>
+<p>Renvoi vers la page <a class="reference external" href="../index.html">reStructured Text</a>.</p>
+</div>
+<p class="rubric">Lien de téléchargement</p>
+<p>Pour finir avec les liens hypertextes, il est possible de créer un lien vers un document à télécharger. La balise qui le permet est <code class="docutils literal notranslate"><span class="pre">:download:</span></code> suivi du fichier à télécharger précédé du chemin relatif.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>On propose le téléchargement d’un document au format <strong>pdf</strong> nommé</p>
 </div>
 </section>
 </section>

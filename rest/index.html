@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Restructured Text (reST) &#8212; Documentation Sphinx </title>
+    <title>reStructured Text (reST) &#8212; Documentation Sphinx </title>
   
   
   
@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -43,13 +42,11 @@
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/translations.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rest/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Syntaxe reST" href="content/syntaxe.html" />
-    <link rel="prev" title="Structure d’un document" href="../sphinx/content/structurer.html" />
+    <link rel="prev" title="Exporter la documentation en latex" href="../sphinx/content/export_latex.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -131,31 +128,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/content/installer.html">Installer son environnement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/content/configurer.html">Le fichier de configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sphinx/content/structurer.html">Structure d’un document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/content/export_html.html">Exporter la documentation en html</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/content/export_latex.html">Exporter la documentation en latex</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Restructured Text (reST)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">reStructured Text (reST)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="content/syntaxe.html">Syntaxe reST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/balises.html">Les balises reST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/directives.html">Les directives reST</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../pyodide/index.html">Documentation Pyodide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../pyodide/content/script.html">Un premier script</a></li>
-
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_design/index.html">Sphinx design</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../sphinx_design/content/installer.html">Présentation de sphinx design</a></li>
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../wsl/index.html">WSL : Windows Subsystem Linux</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../wsl/content/installation.html">Installation de wsl</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../docker/index.html">Les containers docker</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../docker/content/installation.html">installation</a></li>
 </ul>
 </li>
 </ul>
@@ -292,7 +272,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Restructured Text (reST)</h1>
+    <h1>reStructured Text (reST)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -307,8 +287,8 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="restructured-text-rest">
-<h1>Restructured Text (reST)<a class="headerlink" href="#restructured-text-rest" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>Un fichier texte rédigé avec la syntaxe reST permet la mise en forme des différents éléments de texte lors de la compilation du document en html. Cette syntaxe simplifié s’apparente à la syntaxe mardown utilisée dans les notebook jupyter.</p>
+<span id="restructured-text"></span><h1>reStructured Text (reST)<a class="headerlink" href="#restructured-text-rest" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Un fichier texte rédigé avec la syntaxe reST permet la mise en forme des différents éléments de texte lors de la compilation du document en html. Cette syntaxe simplifiée s’apparente à la syntaxe mardown utilisée dans les notebook jupyter.</p>
 <p>Quelle différence entre ces syntaxes et pourquoi choisir reST ?</p>
 <ul class="simple">
 <li><p>Il y a très peu de différence en dehors de la syntaxe elle-même. Elle peut paraître plus lourde au premier abord, mais elle offre au final plus de fonctionnalités.</p></li>
@@ -331,12 +311,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../sphinx/content/structurer.html"
+       href="../sphinx/content/export_latex.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Structure d’un document</p>
+        <p class="prev-next-title">Exporter la documentation en latex</p>
       </div>
     </a>
     <a class="right-next"
