@@ -77,7 +77,6 @@ Après exécution de la commande, la structure de notre projet est en place. Le 
 dossiers **source** et **build** et 2 fichiers **make.bat** et **Makefile**.
 
 .. image:: ../img/arbo_quickstart.svg
-   :scale: 80%
    :alt: Arborescence documentaire
    :align: center
    :class: margin-8 padding-16 border-style-solid border-width-1 border-color-blue-light border-radius-8
@@ -108,7 +107,6 @@ Le dossier **source** va contenir tous les contenus de notre documentation. Cell
 Donc au final, le dossier source a pour contenu 4 dossiers et 2 fichiers comme le montre la figure suivante.
 
 .. image:: ../img/arbo_1.svg
-   :scale: 80%
    :alt: Arborescence documentaire
    :align: center
    :class: margin-8 padding-16 border-style-solid border-width-1 border-color-blue-light border-radius-8
