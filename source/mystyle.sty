@@ -1,0 +1,45 @@
+% mystyle.sty
+
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{ycblue}{rgb}{0.5, 0.8, 1}
+\definecolor{ycred}{rgb}{1.0, 0.25, 0.25}
+\definecolor{ycgreen}{rgb}{0.7, 0.9, 0.4}
+\definecolor{ycgray}{rgb}{0.75,0.85,0.9}
+
+
+% Redéfinir l'espace devant toutes les listes
+\renewcommand{\sphinxsetlistlabels}[5]{}
+\setlist[enumerate]{leftmargin=20pt,itemsep=4pt,labelsep=5pt}
+\setlist[enumerate,1]{label = \colorbox{ycgray}{\textbf{\arabic*}}, ref = \arabic*}
+\setlist[enumerate,2]{label=\textbf{\alph*)}}
+%\setlist[enumerate,3]{label=\textbf{\roman}}
+
+\setlist[itemize]{leftmargin=*}
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\circ$}
+
+
+\newcommand{\titreadm}[1]{\vspace*{4pt}\color{black}\textbf{#1}\vspace{2pt}}
+
+% Redéfinition de l'environnement "notice" (équivalent à l'admonition "note" de Sphinx)
+\renewenvironment{sphinxadmonition}[2]{
+    \tcbset{colback=white,colframe=sphinx#1BorderColor,boxrule=1pt,coltitle=gray}
+    \begin{tcolorbox}[arc=2pt,title=\titreadm{#2}]
+}{
+    \end{tcolorbox}
+}
+
+% Définition du style des sections
+% Définition du style des sections avec \clearpage inclus
+\titleformat{\section}{\clearpage\normalfont\Large\bfseries}{\thesection}{1em}{}
+% Ajout d'un espace de 10pt après chaque section
+% 3 paramètres (espace devant le titre, espace après le titre, espace sous le titre)
+\titlespacing*{\section}{0pt}{0pt}{10pt}
+
+
