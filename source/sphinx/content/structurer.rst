@@ -6,7 +6,6 @@ La création de la structure de la documentation avec la commande ``sphinx-quick
 Par exemple, pour cette documentation, le fichier ``index.rst`` contient les liens vers les 2 fichiers ``index.rst`` placés dans les dossiers ``sphinx`` et ``rest``.
 
 .. figure:: ../img/arbo_2.svg
-   :scale: 80%
    :align: center
    :class: margin-8 padding-16 border-style-solid border-width-1 border-radius-8 border-color-blue-light
 
