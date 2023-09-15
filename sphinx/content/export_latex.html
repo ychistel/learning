@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -57,6 +58,15 @@
   
   
   <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -246,10 +256,10 @@
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -257,7 +267,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -287,6 +297,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-le-fichier-make">Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-la-commande-sphinx-build">Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-formats-d-images">Les formats d’images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-de-l-export">Configuration de l’export</a></li>
 </ul>
             </nav>
         </div>
@@ -353,6 +364,97 @@ document.write(`
 <p>Après cette installation et cette nouvelle configuration, l’exportation en <code class="docutils literal notranslate"><span class="pre">latex</span></code> parvient à insérer les images aux formats <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">jpg</span></code> et <code class="docutils literal notranslate"><span class="pre">svg</span></code>. En fait, les images <code class="docutils literal notranslate"><span class="pre">svg</span></code> sont convertuies au format <code class="docutils literal notranslate"><span class="pre">png</span></code> et sont insérées comme telles.</p>
 <p>Plus d’information sur la documentation sphinx et <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html">image converter using Imagemagick</a>.</p>
 </section>
+<section id="configuration-de-l-export">
+<h2>Configuration de l’export<a class="headerlink" href="#configuration-de-l-export" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Il existe 2 types d’export en latex basés sur les classes <code class="docutils literal notranslate"><span class="pre">sphinxmanual.cls</span></code> et <code class="docutils literal notranslate"><span class="pre">sphinxhowto.cls</span></code>. La première classe crée un document de type <strong>report</strong> avec une hiérarchie en chapitre, section et sous-sections alors que la seconde classe crée un document de type <strong>article</strong> avec des sections et des sous-sections. Par défaut, l’export utilise la classe <code class="docutils literal notranslate"><span class="pre">sphinxmanual.cls</span></code> ou <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il est possible de créer sa propre classe et de l’appliquer lors de l’export en latex.</p>
+</div>
+<p>L’export en <code class="docutils literal notranslate"><span class="pre">latex</span></code> puis en <code class="docutils literal notranslate"><span class="pre">pdf</span></code> est modifiable. Pour cela, on ajoute au fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> des paramètres qui permettent d’ajouter des paquets, des commandes ou des environnements latex.</p>
+<p class="rubric">Moteur de compilation</p>
+<p>Par défaut, le moteur utilisé pour compiler le document <code class="docutils literal notranslate"><span class="pre">latex</span></code> en <code class="docutils literal notranslate"><span class="pre">pdf</span></code> est <strong>pdflatex</strong>. On peut compiler le document latex avec <code class="docutils literal notranslate"><span class="pre">xelatex</span></code> ou <code class="docutils literal notranslate"><span class="pre">lualatex</span></code>. La variable python du fichier <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> à modifier est <code class="docutils literal notranslate"><span class="pre">latex_engine</span></code>. Elle admet comme valeur le moteur de compilation sous forme d’une chaine de caractères.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_engine</span> <span class="o">=</span> <span class="s1">&#39;pdflatex&#39;</span> <span class="c1"># ou &#39;xelatex&#39; ou &#39;lualatex&#39;</span>
+</pre></div>
+</div>
+<p class="rubric">Commandes latex</p>
+<p>Pour ajouter une ou plusieurs commandes en latex à votre document, on déclare dans la variable <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> les commandes souhaitées. Cette variable est un dictionnaire python dont les clés sont des paramètres prédéfinis (voir la documentation de sphinx sur la <a class="reference external" href="https://www.sphinx-doc.org/en/master/latex.html#latex-elements-confval">customization latex</a>). Parmi les paramètres, on a:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">papersize</span></code> qui prend les valeurs <cite>a4paper</cite> ou <cite>letter</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pointsize</span></code> qui définit la taille de police de caractères</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passoptionstopackages</span></code> qui transmet les options à un paramètre</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fncychop</span></code> qui permet d’activer le package pour l’entête et le pied de page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinxsetup</span></code> qui permet d’ajouter des commandes, packages et autres informations au document latex</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preamble</span></code> qui permet d’ajouter des paquets latex dans le préambule</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;cle_1&#39;</span> <span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;commande latex&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;cle_2&#39;</span> <span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;commande latex&#39;</span><span class="p">,</span>
+   <span class="o">...</span>
+   <span class="s1">&#39;cle_n&#39;</span> <span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">      commande latex</span>
+<span class="s1">      comande latex</span>
+<span class="s1">      commande latex ..</span>
+<span class="s1">   &#39;&#39;&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>Il est possible de saisir une commande pour une clé mais aussi de saisir plusieurs commandes dans une même clé avec une triple quote.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Voici la variable python <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> pour l’export latex de cette documentation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;papersize&#39;</span><span class="p">:</span> <span class="s1">&#39;a4paper&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;fontpkg&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">usepackage{amsmath,amsfonts,amssymb,amsthm}&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">usepackage[a4paper,left=0.6in, right=0.6in, top=0.6in, bottom=0.6in]</span><span class="si">{geometry}</span><span class="s1">&#39;</span><span class="p">,</span>
+
+   <span class="s1">&#39;figure_align&#39;</span><span class="p">:</span><span class="s1">&#39;htbp&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;pointsize&#39;</span><span class="p">:</span> <span class="s1">&#39;11pt&#39;</span><span class="p">,</span>
+
+   <span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">      \usepackage</span><span class="si">{verbatim}</span>
+<span class="s1">      \usepackage</span><span class="si">{fancyvrb}</span>
+<span class="s1">   &#39;&#39;&#39;</span><span class="p">,</span>
+
+   <span class="s1">&#39;sphinxsetup&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">      noteBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.53, 0.81, 0.98},</span>
+<span class="s1">      tipBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.53, 0.81, 0.98},</span>
+<span class="s1">      cautionBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.7, 0.93, 0.36},</span>
+<span class="s1">      hintBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.7, 0.93, 0.36},</span>
+<span class="s1">      warningBorderColor=</span><span class="si">{rgb}</span><span class="s1">{1.0, 0.25, 0.25},</span>
+<span class="s1">      errorBorderColor=</span><span class="si">{rgb}</span><span class="s1">{1.0, 0.25, 0.25},</span>
+<span class="s1">      importantBorderColor=</span><span class="si">{rgb}</span><span class="s1">{1.0, 0.25, 0.25},</span>
+<span class="s1">   &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>}</p>
+</div>
+<p class="rubric">Feuille de style</p>
+<ol class="arabic simple">
+<li><p>On crée une feuille de style pour son document latex qu’on appelle <code class="docutils literal notranslate"><span class="pre">mystyle.sty</span></code>.</p></li>
+<li><p>On déclare la feuille de style dans le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> avec la variable python <code class="docutils literal notranslate"><span class="pre">latex_additionnal_files</span></code> qui prend en valeur une liste de chaines de caractères (associées aux fichiers).</p></li>
+<li><p>On appelle la feuille de style depuis le fichier de configuration <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> dans le dictionnaire <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> associée au mot clé <code class="docutils literal notranslate"><span class="pre">preamble</span></code> pour que la commande d’appel latex soit inséré dans le préambule du document latex.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;input</span><span class="si">{mystyle.sty}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>La feuille de style se trouve dans le même dossier que le fichier de configuation <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+</div>
+<div class="exemple docutils container">
+<p class="rubric">Exemple</p>
+<p>c’est un container avec du contenu.
+c’est un container avec du contenu.
+c’est un container avec du contenu.
+c’est un container avec du contenu.
+c’est un container avec du contenu.</p>
+<p>c’est un container avec du contenu.</p>
+</div>
+</section>
 </section>
 
 
@@ -361,11 +463,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="export_html.html"
@@ -385,10 +486,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -406,6 +504,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-le-fichier-make">Avec le fichier <code class="docutils literal notranslate"><span class="pre">make</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-la-commande-sphinx-build">Avec la commande <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-formats-d-images">Les formats d’images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-de-l-export">Configuration de l’export</a></li>
 </ul>
   </nav></div>
 
@@ -453,8 +552,8 @@ Par YC
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
 
   <footer class="bd-footer">
   </footer>
