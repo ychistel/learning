@@ -7,7 +7,7 @@ Par exemple, pour cette documentation, le fichier ``index.rst`` contient les lie
 
 .. figure:: ../img/arbo_2.svg
    :align: center
-   :class: margin-8 padding-16 border-style-solid border-width-1 border-radius-8 border-color-blue-light
+   :class: margin-8 padding-16 border-style-solid border-width-1 border-radius-8 border-color-blue-light border-none
 
 L'insertion des liens vers les autres fichiers se fait avec une directive ``toctree`` placée dans le fichier ``index.rst`` du dossier ``source``:
 

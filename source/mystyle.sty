@@ -43,3 +43,44 @@
 \titlespacing*{\section}{0pt}{0pt}{10pt}
 
 
+# -- Options for LaTeX output ---------------------------------------------
+
+
+latex_additional_files = ['mystyle.sty']
+#latex_toplevel_sectioning = 'section'
+#latex_engine = 'pdflatex'
+
+latex_elements = {
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    'papersize': 'a4paper',
+    'releasename':"",
+    #'fncychap': '\\usepackage{fncychap}',
+    'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
+    'geometry': '\\usepackage[a4paper,left=0.6in, right=0.6in, top=0.6in, bottom=0.6in]{geometry}',
+
+    'figure_align':'htbp',
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    'pointsize': '11pt',
+
+    'preamble': r'''
+    \usepackage{verbatim}
+    \usepackage{fancyvrb}
+
+
+    % Chargement de la feuille de style personnalisée défini dans le tableau latex_additionnal_files (ci-dessus)
+    \input{mystyle.sty}
+    ''',
+    'sphinxsetup':r'''
+    noteBorderColor={rgb}{0.53, 0.81, 0.98},
+    tipBorderColor={rgb}{0.53, 0.81, 0.98},
+    cautionBorderColor={rgb}{0.7, 0.93, 0.36},
+    hintBorderColor={rgb}{0.7, 0.93, 0.36},
+    warningBorderColor={rgb}{1.0, 0.25, 0.25},
+    errorBorderColor={rgb}{1.0, 0.25, 0.25},
+    importantBorderColor={rgb}{1.0, 0.25, 0.25},
+    '''
+}
+
+latex_documents = [(master_doc, 'documentation.tex', 'Export en latex','Yannick Chistel','manual')]
